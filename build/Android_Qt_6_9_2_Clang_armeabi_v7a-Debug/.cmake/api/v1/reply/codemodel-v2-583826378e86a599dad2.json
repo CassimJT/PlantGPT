@@ -1,0 +1,286 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-84afa4f8d2065c2a3a95.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PlantGPT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-e54510fcf83c3488a1ff.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-de77915d66304832e62d.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aar-Debug-33ecc0f7bea4e5f487e4.json",
+					"name" : "aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-119c5f78a1bb2701d501.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-31f8ef165d9a2a892408.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-9ce752e89525eef3f162.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-dc6a83620c1e93ce03b8.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-d09449bf1e132a6a7154.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-f4e8fe740eb3c1d4e688.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-7d9ba18a84ba4bdb2024.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT-Debug-378a0ee29d4409060485.json",
+					"name" : "appPlantGPT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_autogen-Debug-87cd3e661a0854fef298.json",
+					"name" : "appPlantGPT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_autogen_timestamp_deps-Debug-c71556cc5e3e8957e9a3.json",
+					"name" : "appPlantGPT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_apk_dependencies-Debug-a9a65c4a3036075dd358.json",
+					"name" : "appPlantGPT_copy_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_qml-Debug-195967e2fccc3fac1d06.json",
+					"name" : "appPlantGPT_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_res-Debug-fcf58b1ea89c6096e982.json",
+					"name" : "appPlantGPT_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_aab-Debug-a5874da5046ddcc0e3f7.json",
+					"name" : "appPlantGPT_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_aar-Debug-6589dfcaca7f88585b2d.json",
+					"name" : "appPlantGPT_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_apk-Debug-7a46c3ff39e64481aed3.json",
+					"name" : "appPlantGPT_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_prepare_apk_dir-Debug-d275c50bac636eda5c75.json",
+					"name" : "appPlantGPT_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint-Debug-75966322958af8081e8f.json",
+					"name" : "appPlantGPT_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint_json-Debug-606436e2b0a75fda658e.json",
+					"name" : "appPlantGPT_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint_module-Debug-baf139e19e9e8ed4aaf2.json",
+					"name" : "appPlantGPT_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmltyperegistration-Debug-45a6febae3612c9d39f8.json",
+					"name" : "appPlantGPT_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appPlantGPT_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appPlantGPT_aotstats_target-Debug-28caf3d0b4f3cadb0927.json",
+					"name" : "module_appPlantGPT_aotstats_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-a877a4e2c9ca66fe5000.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug",
+		"source" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

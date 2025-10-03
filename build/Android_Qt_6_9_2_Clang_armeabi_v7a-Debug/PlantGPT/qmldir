@@ -1,0 +1,6 @@
+module PlantGPT
+typeinfo appPlantGPT.qmltypes
+prefer :/qt/qml/PlantGPT/
+Main 1.0 Main.qml
+depends QtQuick
+
