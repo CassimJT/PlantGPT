@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/PlantGPT/">
+    <file alias="Main.qml">/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/Main.qml</file>
+  </qresource>
+</RCC>
+
