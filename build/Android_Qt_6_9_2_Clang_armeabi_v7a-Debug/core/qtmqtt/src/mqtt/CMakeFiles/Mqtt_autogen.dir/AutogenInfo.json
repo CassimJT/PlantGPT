@@ -1,0 +1,305 @@
+{
+	"BUILD_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen",
+	"CMAKE_BINARY_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt",
+	"CMAKE_EXECUTABLE" : "/opt/Qt/Tools/CMake/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/CMakeLists.txt",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/modulecppexports.h.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtModuleConfig.cmake.in",
+		"/opt/Qt/Tools/CMake/share/cmake-3.30/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtCMakePackageVersionFile.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtModuleConfigPrivate.cmake.in",
+		"/opt/Qt/Tools/CMake/share/cmake-3.30/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtCMakePackageVersionFile.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtVersionlessTargets.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtVersionlessAliasTargets.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtVersionlessTargets.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtVersionlessAliasTargets.cmake.in",
+		"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/ModuleDescription.json.in"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "Mqtt_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/include/QtMqtt/qtmqttexports.h",
+			"Mu",
+			"3DNUTOIR2N/moc_qtmqttexports.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttauthenticationproperties.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttauthenticationproperties.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttclient.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttclient.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttclient_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttclient_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttconnection_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttconnection_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttconnectionproperties.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttconnectionproperties.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttconnectionproperties_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttconnectionproperties_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttcontrolpacket_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttcontrolpacket_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttglobal.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttglobal.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttglobal_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttglobal_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttmessage.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttmessage.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttmessage_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttmessage_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttpublishproperties.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttpublishproperties.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttpublishproperties_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttpublishproperties_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttsubscription.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttsubscription.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttsubscription_p.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttsubscription_p.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttsubscriptionproperties.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqttsubscriptionproperties.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttopicfilter.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqtttopicfilter.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttopicname.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqtttopicname.cpp",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttype.h",
+			"Mu",
+			"EWIEGA46WW/moc_qmqtttype.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"Mqtt_EXPORTS",
+		"QT_ASCII_CAST_WARNINGS",
+		"QT_BUILDING_QT",
+		"QT_BUILD_MQTT_LIB",
+		"QT_CORE_LIB",
+		"QT_DEPRECATED_WARNINGS",
+		"QT_EXPLICIT_QFILE_CONSTRUCTION_FROM_PATH",
+		"QT_MOC_COMPAT",
+		"QT_NETWORK_LIB",
+		"QT_NO_AS_CONST=1",
+		"QT_NO_CAST_TO_ASCII",
+		"QT_NO_EXCEPTIONS",
+		"QT_NO_FOREACH",
+		"QT_NO_FOREACH=1",
+		"QT_NO_JAVA_STYLE_ITERATORS",
+		"QT_NO_NARROWING_CONVERSIONS_IN_CONNECT",
+		"QT_NO_QASCONST",
+		"QT_NO_QEXCHANGE",
+		"QT_NO_QSNPRINTF",
+		"QT_NO_STD_FORMAT_SUPPORT",
+		"QT_USE_QSTRINGBUILDER",
+		"_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/include",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/include/QtMqtt",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/include/QtMqtt/6.9.2",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/include/QtMqtt/6.9.2/QtMqtt",
+		"/opt/Qt/6.9.2/android_armv7/include/QtCore",
+		"/opt/Qt/6.9.2/android_armv7/include",
+		"/opt/Qt/6.9.2/android_armv7/mkspecs/android-clang",
+		"/opt/Qt/6.9.2/android_armv7/include/QtNetwork",
+		"/opt/Qt/6.9.2/android_armv7/include/QtCore/6.9.2",
+		"/opt/Qt/6.9.2/android_armv7/include/QtCore/6.9.2/QtCore",
+		"/home/csociety/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1",
+		"/home/csociety/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/lib/clang/18/include",
+		"/home/csociety/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi",
+		"/home/csociety/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [ "--output-json" ],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/home/csociety/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++",
+		"-std=gnu++17",
+		"-dM",
+		"-E",
+		"-c",
+		"/opt/Qt/Tools/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp",
+		"--target=armv7-none-linux-androideabi23"
+	],
+	"MOC_PREDEFS_FILE" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/qtmqtt-config.h",
+		"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/qtmqtt-config_p.h"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/CMakeFiles/Mqtt_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/opt/Qt/6.9.2/gcc_64/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 9,
+	"SETTINGS_FILE" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/core/qtmqtt/src/mqtt/CMakeFiles/Mqtt_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttauthenticationproperties.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttclient.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttconnection.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttconnectionproperties.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttcontrolpacket.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttmessage.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttpublishproperties.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttsubscription.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqttsubscriptionproperties.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttopicfilter.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttopicname.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/core/qtmqtt/src/mqtt/qmqtttype.cpp",
+			"Mu",
+			null
+		]
+	],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

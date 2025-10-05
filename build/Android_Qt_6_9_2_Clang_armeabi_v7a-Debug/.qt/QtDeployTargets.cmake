@@ -1,2 +1,4 @@
+set(__QT_DEPLOY_TARGET_Mqtt_FILE /home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/lib/libQt6Mqtt_armeabi-v7a.so)
+set(__QT_DEPLOY_TARGET_Mqtt_TYPE SHARED_LIBRARY)
 set(__QT_DEPLOY_TARGET_appPlantGPT_FILE /home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug/libappPlantGPT_armeabi-v7a.so)
 set(__QT_DEPLOY_TARGET_appPlantGPT_TYPE MODULE_LIBRARY)

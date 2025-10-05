@@ -1,0 +1,71 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"qt_internal_setup_global_doc_targets",
+			"qt_build_repo_begin",
+			"qt_build_repo",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtBuildRepoHelpers.cmake",
+			"core/qtmqtt/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 562,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 305,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 179,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 184,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "generate_docs::@09c19d9fef0a545ebecb"
+		}
+	],
+	"id" : "html_docs::@09c19d9fef0a545ebecb",
+	"name" : "html_docs",
+	"paths" : 
+	{
+		"build" : "core/qtmqtt",
+		"source" : "core/qtmqtt"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

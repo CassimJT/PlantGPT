@@ -1,0 +1,92 @@
+{
+    "classes": [
+        {
+            "className": "QMqttMessage",
+            "gadget": true,
+            "lineNumber": 19,
+            "properties": [
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "topic",
+                    "read": "topic",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QMqttTopicName",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "payload",
+                    "read": "payload",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QByteArray",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "id",
+                    "read": "id",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "quint16",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "qos",
+                    "read": "qos",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "quint8",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "duplicate",
+                    "read": "duplicate",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "retain",
+                    "read": "retain",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "QMqttMessage"
+        }
+    ],
+    "inputFile": "qmqttmessage.h",
+    "outputRevision": 69
+}

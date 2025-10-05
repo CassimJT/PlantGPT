@@ -1,0 +1,104 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"qt_internal_show_extra_ide_sources",
+			"qt_build_repo_end",
+			"qt_build_repo"
+		],
+		"files" : 
+		[
+			"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtBuildRepoHelpers.cmake",
+			"core/qtmqtt/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 571,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 399,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 506,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "qtmqtt_licenses::@09c19d9fef0a545ebecb",
+	"name" : "qtmqtt_licenses",
+	"paths" : 
+	{
+		"build" : "core/qtmqtt",
+		"source" : "core/qtmqtt"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "LICENSES",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/LICENSES/BSD-3-Clause.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/LICENSES/GFDL-1.3-no-invariants-only.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/LICENSES/GPL-3.0-only.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/LICENSES/LicenseRef-Qt-Commercial.txt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/licenseRule.json",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

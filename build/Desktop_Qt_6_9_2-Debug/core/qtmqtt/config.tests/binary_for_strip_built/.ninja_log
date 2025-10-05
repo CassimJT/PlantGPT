@@ -1,0 +1,5 @@
+# ninja log v5
+0	14	1759672361272868994	CMakeFiles/lib1.dir/lib1.cpp.o	5a9944ceba826dc9
+14	34	1759672361292864586	liblib1.so	b62e715d4a291cf5
+34	37	0	CMakeFiles/print_lib_path	7d58324d463a231a
+34	37	0	/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/config.tests/binary_for_strip_built/CMakeFiles/print_lib_path	7d58324d463a231a
