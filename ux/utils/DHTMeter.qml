@@ -103,7 +103,7 @@ Item {
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: progress.startAngle
+                startAngle: progress.rightStartAngle
                 sweepAngle: (300 / progress.maxValue * progress.value)
             }
         }
