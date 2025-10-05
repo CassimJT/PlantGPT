@@ -1,0 +1,888 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0b28b7f2c72bcad31545.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						7,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						56,
+						68
+					]
+				},
+				{
+					"build" : "core/qtmqtt",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-core.qtmqtt-Debug-faf9e6e9d83368a04647.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "core/qtmqtt",
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						15,
+						32,
+						33,
+						34,
+						35,
+						37,
+						38,
+						40,
+						43,
+						44,
+						46,
+						47,
+						49,
+						50,
+						52,
+						53,
+						55,
+						57,
+						59,
+						61,
+						63,
+						66,
+						67,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						83,
+						84
+					]
+				},
+				{
+					"build" : "core/qtmqtt/src",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-core.qtmqtt.src-Debug-613355ec24f0d6a455ad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "core/qtmqtt/src"
+				},
+				{
+					"build" : "core/qtmqtt/src/mqtt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-core.qtmqtt.src.mqtt-Debug-1dcaca0bac6e03850be6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "core/qtmqtt/src/mqtt",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						36,
+						39,
+						41,
+						42,
+						45,
+						48,
+						51,
+						54,
+						58,
+						60,
+						62,
+						64,
+						65,
+						82
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PlantGPT",
+					"targetIndexes" : 
+					[
+						7,
+						10,
+						11,
+						12,
+						13,
+						14,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						56,
+						68
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"name" : "QtMqtt",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						15,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt-Debug-49445703e6dfe94e0da5.json",
+					"name" : "Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_autogen::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_autogen-Debug-f5cd57c2ae1077884af2.json",
+					"name" : "Mqtt_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_autogen_timestamp_deps::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_autogen_timestamp_deps-Debug-70d71ed871ee325f2f2c.json",
+					"name" : "Mqtt_autogen_timestamp_deps",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_lib_pri::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_lib_pri-Debug-8f4126bb13053745c53f.json",
+					"name" : "Mqtt_lib_pri",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_sync_all_public_headers::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_sync_all_public_headers-Debug-82ef9230b9671ea8be73.json",
+					"name" : "Mqtt_sync_all_public_headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_sync_headers::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_sync_headers-Debug-a57a2b3b1cae9d96cf10.json",
+					"name" : "Mqtt_sync_headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Mqtt_version_script::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-Mqtt_version_script-Debug-8328c772b35097c0a5b4.json",
+					"name" : "Mqtt_version_script",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_qt_internal_apk_dependencies-Debug-e54510fcf83c3488a1ff.json",
+					"name" : "_qt_internal_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "aab::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-aab-Debug-c1d28c044d41cfa16e66.json",
+					"name" : "aab",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "aar::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-aar-Debug-fab62eb600c5642d9d77.json",
+					"name" : "aar",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-1debff500b91a08976b2.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-d7a38511663cd72fd576.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-f0e8ea48e1cdf9c2d599.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-7c331645b2b941545b30.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-f730f887e6b77951963e.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "apk::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-apk-Debug-e5eaee0b32e6ca3a9942.json",
+					"name" : "apk",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-23c89d962854e0dd3611.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT-Debug-67dbd66c2abd2eeaf390.json",
+					"name" : "appPlantGPT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_autogen-Debug-87cd3e661a0854fef298.json",
+					"name" : "appPlantGPT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_autogen_timestamp_deps-Debug-19ebfde7c1994b157678.json",
+					"name" : "appPlantGPT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_apk_dependencies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_apk_dependencies-Debug-a9a65c4a3036075dd358.json",
+					"name" : "appPlantGPT_copy_apk_dependencies",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_qml-Debug-f80d1adbc172f596e90b.json",
+					"name" : "appPlantGPT_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_copy_res-Debug-26dabfee4cb9048fb67e.json",
+					"name" : "appPlantGPT_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_aab-Debug-a5874da5046ddcc0e3f7.json",
+					"name" : "appPlantGPT_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_aar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_aar-Debug-6589dfcaca7f88585b2d.json",
+					"name" : "appPlantGPT_make_aar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_make_apk-Debug-7a46c3ff39e64481aed3.json",
+					"name" : "appPlantGPT_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_other_files-Debug-c1433a7b230eaee9e9cc.json",
+					"name" : "appPlantGPT_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_prepare_apk_dir-Debug-d275c50bac636eda5c75.json",
+					"name" : "appPlantGPT_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint-Debug-cb739e3e822dee956692.json",
+					"name" : "appPlantGPT_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint_json-Debug-28f6c17910c6a4391c8b.json",
+					"name" : "appPlantGPT_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmllint_module-Debug-8287963317d9a93dfc14.json",
+					"name" : "appPlantGPT_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPlantGPT_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPlantGPT_qmltyperegistration-Debug-8bc3f43c6590e439ade4.json",
+					"name" : "appPlantGPT_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "benchmark::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-benchmark-Debug-9cbe955fe0a79d4440db.json",
+					"name" : "benchmark",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "bootstrap_tools::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-bootstrap_tools-Debug-c3d2f548306ad3eca4ef.json",
+					"name" : "bootstrap_tools",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "doc_tools::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-doc_tools-Debug-ef4e9186d0a8eb174a8e.json",
+					"name" : "doc_tools",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-docs-Debug-3ac7086febd3f0e8cdc6.json",
+					"name" : "docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-docs_Mqtt-Debug-7de8d836b3d6052081ff.json",
+					"name" : "docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-docs_qtmqtt-Debug-62d5221bce03d970712f.json",
+					"name" : "docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "generate_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-generate_docs-Debug-9d4db16b6a2065103bca.json",
+					"name" : "generate_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "generate_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-generate_docs_Mqtt-Debug-1348c9e292c4e1aaa01a.json",
+					"name" : "generate_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "generate_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-generate_docs_qtmqtt-Debug-c37606b4a97275bf7340.json",
+					"name" : "generate_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "generate_repo_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-generate_repo_docs_Mqtt-Debug-5724bb37dd1d1d394ce3.json",
+					"name" : "generate_repo_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "generate_top_level_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-generate_top_level_docs_Mqtt-Debug-8bda88e999ba4001ada8.json",
+					"name" : "generate_top_level_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "host_tools::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-host_tools-Debug-e4f5623933a6b9945de6.json",
+					"name" : "host_tools",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "html_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-html_docs-Debug-55050000a9e196fbb444.json",
+					"name" : "html_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "html_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-html_docs_Mqtt-Debug-18e10d886a4aeb21317c.json",
+					"name" : "html_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "html_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-html_docs_qtmqtt-Debug-843836abf069edfb7528.json",
+					"name" : "html_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_docs-Debug-cc0d728b5e5f37f1e19e.json",
+					"name" : "install_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "install_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-install_docs_Mqtt-Debug-f24479624acbed888dfd.json",
+					"name" : "install_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_docs_qtmqtt-Debug-a43ee74bd52304989e97.json",
+					"name" : "install_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_html_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_html_docs-Debug-22643c80eec73551e19a.json",
+					"name" : "install_html_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "install_html_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-install_html_docs_Mqtt-Debug-17fb3aac3572592071e6.json",
+					"name" : "install_html_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_html_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_html_docs_qtmqtt-Debug-70f50e9b0af23d55efc8.json",
+					"name" : "install_html_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_qch_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_qch_docs-Debug-6ab77874c823e38b9d2a.json",
+					"name" : "install_qch_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "install_qch_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-install_qch_docs_Mqtt-Debug-55a165d13819a16867f6.json",
+					"name" : "install_qch_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "install_qch_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-install_qch_docs_qtmqtt-Debug-077764f9da0f6b9a1c8a.json",
+					"name" : "install_qch_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appPlantGPT_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appPlantGPT_aotstats_target-Debug-e7002822eba97d40771e.json",
+					"name" : "module_appPlantGPT_aotstats_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "prepare_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-prepare_docs-Debug-c1dacbba0d387c1826db.json",
+					"name" : "prepare_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "prepare_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-prepare_docs_Mqtt-Debug-cc3304a589c364ecb596.json",
+					"name" : "prepare_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "prepare_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-prepare_docs_qtmqtt-Debug-f119155b7bf91991aa72.json",
+					"name" : "prepare_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qattributionsscanner_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-qattributionsscanner_Mqtt-Debug-bf5f2d7740b79496ea40.json",
+					"name" : "qattributionsscanner_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qch_docs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qch_docs-Debug-a85534ebbaedc944dd10.json",
+					"name" : "qch_docs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qch_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-qch_docs_Mqtt-Debug-e3197a69b21a41eb35e8.json",
+					"name" : "qch_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qch_docs_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qch_docs_qtmqtt-Debug-506552ed3bad05fd7ab6.json",
+					"name" : "qch_docs_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qch_repo_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-qch_repo_docs_Mqtt-Debug-b77ad292dc3bde10f3fd.json",
+					"name" : "qch_repo_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qch_top_level_docs_Mqtt::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-qch_top_level_docs_Mqtt-Debug-d1c3dadb291a339f7640.json",
+					"name" : "qch_top_level_docs_Mqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qpa_default_plugins::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qpa_default_plugins-Debug-001da4c31746a9726b5d.json",
+					"name" : "qpa_default_plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qpa_plugins::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qpa_plugins-Debug-5cd7ec89a32ae1f18444.json",
+					"name" : "qpa_plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-a877a4e2c9ca66fe5000.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qt_plugins::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qt_plugins-Debug-d3ba5f4224ba13251891.json",
+					"name" : "qt_plugins",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qt_plugins_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qt_plugins_qtmqtt-Debug-5405af6a826e2cd359e9.json",
+					"name" : "qt_plugins_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qt_plugins_qtmqtt_recursive::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qt_plugins_qtmqtt_recursive-Debug-4b2f654867b437a9d378.json",
+					"name" : "qt_plugins_qtmqtt_recursive",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt-Debug-66ea45effb300dddbd69.json",
+					"name" : "qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_changelogs::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_changelogs-Debug-d14a33b307bf8b897d8c.json",
+					"name" : "qtmqtt_changelogs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_cmake_files::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_cmake_files-Debug-11a6ca2e6a6ac9d6c77d.json",
+					"name" : "qtmqtt_cmake_files",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_coin_files::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_coin_files-Debug-318f1edc481b2875eb9a.json",
+					"name" : "qtmqtt_coin_files",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_extra_files::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_extra_files-Debug-68895dad6f52cf880c8b.json",
+					"name" : "qtmqtt_extra_files",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_licenses::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_licenses-Debug-5ee67b5798e1e195f63f.json",
+					"name" : "qtmqtt_licenses",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_src::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_src-Debug-869c77b7426a3bc6403d.json",
+					"name" : "qtmqtt_src",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qtmqtt_src_for_examples::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-qtmqtt_src_for_examples-Debug-ca8c570e6f0a20f29b35.json",
+					"name" : "qtmqtt_src_for_examples",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sbom::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-sbom-Debug-dda56152ef6fc2bd36d7.json",
+					"name" : "sbom",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sbom_qtmqtt::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-sbom_qtmqtt-Debug-b94959472345084c66f4.json",
+					"name" : "sbom_qtmqtt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sync_all_public_headers::@d7b36e86fefdda42a03f",
+					"jsonFile" : "target-sync_all_public_headers-Debug-f104ccbdccc7e5b26c50.json",
+					"name" : "sync_all_public_headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sync_headers::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-sync_headers-Debug-2ef85380a4bc54e5a573.json",
+					"name" : "sync_headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "thirdparty_sync_headers::@09c19d9fef0a545ebecb",
+					"jsonFile" : "target-thirdparty_sync_headers-Debug-67b891b0f57a62008fce.json",
+					"name" : "thirdparty_sync_headers",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Android_Qt_6_9_2_Clang_armeabi_v7a-Debug",
+		"source" : "/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

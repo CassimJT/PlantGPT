@@ -1,0 +1,639 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"qt6_extract_metatypes",
+			"qt_internal_add_module",
+			"qt_install",
+			"qt_internal_write_basic_module_package",
+			"qt_internal_export_module",
+			"qt_internal_export_modern_cmake_config_targets_file",
+			"qt_enable_separate_debug_info",
+			"qt_describe_module",
+			"qt_internal_add_docs",
+			"qt_internal_export_additional_targets_file_handler",
+			"qt_internal_export_additional_targets_file_finalizer",
+			"qt_internal_target_sync_headers",
+			"qt_finalize_module",
+			"qt_internal_install_module_headers",
+			"qt_generate_module_pri_file",
+			"qt_internal_generate_pkg_config_file"
+		],
+		"files" : 
+		[
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtModuleHelpers.cmake",
+			"core/qtmqtt/src/mqtt/CMakeLists.txt",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtInstallHelpers.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtTargetHelpers.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtSeparateDebugInfo.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtDocsHelpers.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtScopeFinalizerHelpers.cmake:24:EVAL",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtSyncQtHelpers.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtPriHelpers.cmake",
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtPkgConfigHelpers.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 794,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1559,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 805,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1051,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 825,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1051,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 845,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1075,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 11
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1083,
+				"parent" : 10
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 1094,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 1211,
+				"parent" : 15
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 16
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 851,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1083,
+				"parent" : 18
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 19
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 1094,
+				"parent" : 18
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 1211,
+				"parent" : 21
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 22
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 923,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 334,
+				"parent" : 24
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 25
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 936,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1480,
+				"parent" : 27
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 28
+			},
+			{
+				"command" : 9,
+				"file" : 2,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 6,
+				"line" : 348,
+				"parent" : 30
+			},
+			{
+				"command" : 0,
+				"file" : 6,
+				"line" : 361,
+				"parent" : 30
+			},
+			{
+				"file" : 2,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 7,
+				"line" : 1,
+				"parent" : 33
+			},
+			{
+				"command" : 10,
+				"file" : 4,
+				"line" : 877,
+				"parent" : 34
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 1168,
+				"parent" : 35
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 36
+			},
+			{
+				"command" : 10,
+				"file" : 4,
+				"line" : 877,
+				"parent" : 34
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 1168,
+				"parent" : 38
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 39
+			},
+			{
+				"command" : 13,
+				"file" : 7,
+				"line" : 1,
+				"parent" : 33
+			},
+			{
+				"command" : 12,
+				"file" : 1,
+				"line" : 1137,
+				"parent" : 41
+			},
+			{
+				"command" : 3,
+				"file" : 8,
+				"line" : 267,
+				"parent" : 42
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 43
+			},
+			{
+				"command" : 14,
+				"file" : 1,
+				"line" : 1143,
+				"parent" : 41
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1550,
+				"parent" : 45
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 46
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1554,
+				"parent" : 45
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 48
+			},
+			{
+				"command" : 15,
+				"file" : 1,
+				"line" : 1153,
+				"parent" : 41
+			},
+			{
+				"command" : 3,
+				"file" : 9,
+				"line" : 590,
+				"parent" : 50
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 51
+			},
+			{
+				"command" : 16,
+				"file" : 1,
+				"line" : 1154,
+				"parent" : 41
+			},
+			{
+				"command" : 3,
+				"file" : 10,
+				"line" : 177,
+				"parent" : 53
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 21,
+				"parent" : 54
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "./metatypes",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/meta_types/qt6mqtt_debug_metatypes.json"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Devel",
+			"destination" : "lib/cmake/Qt6Mqtt",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttConfig.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttConfigVersion.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttConfigVersionImpl.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Devel",
+			"destination" : "lib/cmake/Qt6MqttPrivate",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateConfig.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateConfigVersion.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateConfigVersionImpl.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libQt6Mqtt.so.6.9.2",
+				"lib/libQt6Mqtt.so.6"
+			],
+			"targetId" : "Mqtt::@d7b36e86fefdda42a03f",
+			"targetIndex" : 0,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libQt6Mqtt.so"
+			],
+			"targetId" : "Mqtt::@d7b36e86fefdda42a03f",
+			"targetIndex" : 0,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Qt6Mqtt",
+			"exportName" : "Qt6MqttTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "Mqtt::@d7b36e86fefdda42a03f",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"core/qtmqtt/src/mqtt/CMakeFiles/Export/4fad7c2282f83b62338f8317ce35cfb1/Qt6MqttTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Devel",
+			"destination" : "lib/cmake/Qt6Mqtt",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttVersionlessAliasTargets.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttVersionlessTargets.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Qt6MqttPrivate",
+			"exportName" : "Qt6MqttPrivateTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "MqttPrivate::@d7b36e86fefdda42a03f",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"core/qtmqtt/src/mqtt/CMakeFiles/Export/dac601b1891e607c607dfe086e9e4bc2/Qt6MqttPrivateTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 23,
+			"component" : "Devel",
+			"destination" : "lib/cmake/Qt6MqttPrivate",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateVersionlessAliasTargets.cmake",
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateVersionlessTargets.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 26,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/Qt6Mqtt.debug"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 29,
+			"component" : "Unspecified",
+			"destination" : "modules",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/modules/Mqtt.json"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 31,
+			"component" : "_install_html_docs_Mqtt",
+			"destination" : "doc/qtmqtt",
+			"isExcludeFromAll" : true,
+			"paths" : 
+			[
+				{
+					"from" : "build/Desktop_Qt_6_9_2-Debug/doc/qtmqtt",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 32,
+			"component" : "_install_qch_docs_Mqtt",
+			"destination" : "doc",
+			"isExcludeFromAll" : true,
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/doc/qtmqtt.qch"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 37,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Qt6Mqtt",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6Mqtt/Qt6MqttAdditionalTargetInfo.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 40,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/Qt6MqttPrivate",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateAdditionalTargetInfo.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 44,
+			"component" : "Unspecified",
+			"destination" : "include/QtMqtt",
+			"paths" : 
+			[
+				{
+					"from" : "build/Desktop_Qt_6_9_2-Debug/include/QtMqtt/.syncqt_staging",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 47,
+			"component" : "Unspecified",
+			"destination" : "include/QtMqtt",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/include/QtMqtt/qtmqttexports.h",
+				"core/qtmqtt/src/mqtt/qmqttauthenticationproperties.h",
+				"core/qtmqtt/src/mqtt/qmqttclient.h",
+				"core/qtmqtt/src/mqtt/qmqttconnectionproperties.h",
+				"core/qtmqtt/src/mqtt/qmqttglobal.h",
+				"core/qtmqtt/src/mqtt/qmqttmessage.h",
+				"core/qtmqtt/src/mqtt/qmqttpublishproperties.h",
+				"core/qtmqtt/src/mqtt/qmqttsubscription.h",
+				"core/qtmqtt/src/mqtt/qmqttsubscriptionproperties.h",
+				"core/qtmqtt/src/mqtt/qmqtttopicfilter.h",
+				"core/qtmqtt/src/mqtt/qmqtttopicname.h",
+				"core/qtmqtt/src/mqtt/qmqtttype.h",
+				"build/Desktop_Qt_6_9_2-Debug/include/QtMqtt/QtMqttDepends"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 49,
+			"component" : "Unspecified",
+			"destination" : "include/QtMqtt/6.9.2/QtMqtt/private",
+			"paths" : 
+			[
+				"core/qtmqtt/src/mqtt/qmqttclient_p.h",
+				"core/qtmqtt/src/mqtt/qmqttconnection_p.h",
+				"core/qtmqtt/src/mqtt/qmqttconnectionproperties_p.h",
+				"core/qtmqtt/src/mqtt/qmqttcontrolpacket_p.h",
+				"core/qtmqtt/src/mqtt/qmqttglobal_p.h",
+				"core/qtmqtt/src/mqtt/qmqttmessage_p.h",
+				"core/qtmqtt/src/mqtt/qmqttpublishproperties_p.h",
+				"core/qtmqtt/src/mqtt/qmqttsubscription_p.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 52,
+			"component" : "Unspecified",
+			"destination" : "mkspecs/modules",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/mkspecs/modules/qt_lib_mqtt.pri",
+				"build/Desktop_Qt_6_9_2-Debug/mkspecs/modules/qt_lib_mqtt_private.pri"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 55,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/Desktop_Qt_6_9_2-Debug/lib/pkgconfig/Qt6Mqtt.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "core/qtmqtt/src/mqtt",
+		"source" : "core/qtmqtt/src/mqtt"
+	}
+}

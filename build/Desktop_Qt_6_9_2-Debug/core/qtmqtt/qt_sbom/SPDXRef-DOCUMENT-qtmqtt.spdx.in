@@ -1,0 +1,40 @@
+SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: qtmqtt-6.9.2
+DocumentNamespace: https://qt.io/spdxdocs/qtmqtt-b468272+main+dirty
+Creator: Organization: TheQtCompany
+Creator: Tool: Qt Build System
+CreatorComment: <text>This SPDX document was created from CMake 3.30.5, using the qt
+build system from https://code.qt.io/cgit/qt/qtbase.git/tree/cmake/QtPublicSbomHelpers.cmake</text>
+Created: 2025-10-05T13:59:47Z${QT_SBOM_EXTERNAL_DOC_REFS}
+
+PackageName: GNU
+SPDXID: SPDXRef-compiler
+PackageVersion: 13.3.0
+PackageDownloadLocation: NOASSERTION
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageSupplier: Organization: Anonymous
+FilesAnalyzed: false
+PackageSummary: <text>The compiler as identified by CMake, running on Linux (x86_64)</text>
+PrimaryPackagePurpose: APPLICATION
+Relationship: SPDXRef-compiler BUILD_DEPENDENCY_OF SPDXRef-Package-qtmqtt
+RelationshipComment: <text>SPDXRef-Package-qtmqtt is built by compiler GNU version 13.3.0</text>
+
+PackageName: qtmqtt
+SPDXID: SPDXRef-Package-qtmqtt
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:qt:qtmqtt:6.9.2:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:generic/TheQtCompany/qtmqtt@b468272+main+dirty
+PackageVersion: b468272+main+dirty
+PackageSupplier: Organization: TheQtCompany
+PackageDownloadLocation: git://code.qt.io/qt/qtmqtt.git@b468272c57fdfcce63487aee95e4aedaa0bfe1d6
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: Copyright (C) The Qt Company Ltd. and other contributors.
+PackageHomePage: https://qt.io
+PackageComment: <text>Built by CMake 3.30.5 with Debug configuration for Linux (x86_64)</text>
+PackageVerificationCode: ${QT_SBOM_VERIFICATION_CODE}
+BuiltDate: 2025-10-05T13:59:47Z
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-Package-qtmqtt

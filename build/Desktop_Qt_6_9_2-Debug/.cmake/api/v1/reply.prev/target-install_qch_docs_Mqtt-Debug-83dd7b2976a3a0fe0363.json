@@ -1,0 +1,74 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"qt_internal_add_docs"
+		],
+		"files" : 
+		[
+			"/opt/Qt/6.9.2/gcc_64/lib/cmake/Qt6/QtDocsHelpers.cmake",
+			"core/qtmqtt/src/mqtt/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 367,
+				"parent" : 1
+			}
+		]
+	},
+	"id" : "install_qch_docs_Mqtt::@d7b36e86fefdda42a03f",
+	"name" : "install_qch_docs_Mqtt",
+	"paths" : 
+	{
+		"build" : "core/qtmqtt/src/mqtt",
+		"source" : "core/qtmqtt/src/mqtt"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/CMakeFiles/install_qch_docs_Mqtt",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/CMakeFiles/install_qch_docs_Mqtt.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

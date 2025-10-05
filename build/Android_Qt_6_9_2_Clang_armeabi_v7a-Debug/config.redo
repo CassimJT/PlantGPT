@@ -1,0 +1,2 @@
+#!/bin/sh
+/tmp/bin/qt-configure-module /home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT -redo "$@"

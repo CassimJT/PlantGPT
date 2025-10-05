@@ -1,0 +1,140 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"qt_internal_show_extra_ide_sources",
+			"qt_build_repo_end",
+			"qt_build_repo"
+		],
+		"files" : 
+		[
+			"/opt/Qt/6.9.2/android_armv7/lib/cmake/Qt6/QtBuildRepoHelpers.cmake",
+			"core/qtmqtt/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 571,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 399,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 514,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "qtmqtt_changelogs::@09c19d9fef0a545ebecb",
+	"name" : "qtmqtt_changelogs",
+	"paths" : 
+	{
+		"build" : "core/qtmqtt",
+		"source" : "core/qtmqtt"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/REUSE.toml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.11.0",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.11.2",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.12.0",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.12.10",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.13.1",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.14.0",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.14.1",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.14.2",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.15.0",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.15.1",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "core/qtmqtt/dist/changes-5.15.2",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "UTILITY"
+}

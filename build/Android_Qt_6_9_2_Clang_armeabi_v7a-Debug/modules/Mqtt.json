@@ -1,0 +1,23 @@
+{
+    "schema_version": 2,
+    "name": "Mqtt",
+    "repository": "qtmqtt",
+    "version": "6.9.2",
+    "platforms": [
+        {
+            "name": "Android",
+            "version": "23",
+            "compiler_id": "Clang",
+            "compiler_version": "18.0.3",
+            "targets": [
+                {
+                    "api_version": "android-35",
+                    "ndk_version": "27.2.12479018",
+                    "android_platform": "android-23",
+                    "architecture": "arm",
+                    "abi": "arm-little_endian-ilp32-eabi"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+--resource
+/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/.qt/rcc/qmake_PlantGPT.qrc
+--resource
+/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/.qt/rcc/appPlantGPT_raw_qml_0.qrc
+--resource
+/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/.qt/rcc/appPlantGPT_raw_qml_0_extra_qmldirs.qrc
+/qt/qml/PlantGPT/Main.qml
+/qt/qml/PlantGPT/ux/utils/CircularProgressBar.qml
+/qt/qml/PlantGPT/ux/utils/DHTMeter.qml
