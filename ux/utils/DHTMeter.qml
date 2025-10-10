@@ -33,6 +33,32 @@ Item {
     property int rightStartAngle: -80
     property int rightSweepAngle: 160
 
+    //dotted line
+    Canvas {
+        id: outerDotted
+        anchors.centerIn: parent
+        opacity: 0.4
+        width: parent.width + 2 * (progress.strokeBgWidth + 4)
+        height: parent.height + 2 * (progress.strokeBgWidth + 4)
+        onPaint: {
+            var ctx = getContext("2d")
+            ctx.clearRect(0,0,width,height)
+            var cx = width / 2
+            var cy = height / 2
+            var gauge_r = Math.min(parent.width, parent.height) / 2
+            var r = gauge_r + progress.strokeBgWidth + 2
+            var dots = 40
+            ctx.fillStyle = "#555"
+            for (var i = 0; i < dots; i++) {
+                var ang = (i / dots) * Math.PI * 2
+                var x = cx + Math.cos(ang) * r
+                var y = cy + Math.sin(ang) * r
+                ctx.beginPath()
+                ctx.arc(x, y, 2, 0, Math.PI * 2)
+                ctx.fill()
+            }
+        }
+    }
     Shape{
         id: shape
         anchors.fill: parent
@@ -40,7 +66,7 @@ Item {
         layer.samples: progress.samples
         //the right half
         ShapePath{
-            id: lefHalf
+            id: lefHalfBG
             strokeColor: progress.bgStrokeColor
             fillColor: progress.bgColor
             strokeWidth: progress.strokeBgWidth
@@ -55,7 +81,7 @@ Item {
                 sweepAngle: progress.sweepAngle
             }
         }
-        //the left halp
+        //the left half
         ShapePath{
             id: rightHalf
             strokeColor: progress.bgStrokeColor
@@ -90,23 +116,25 @@ Item {
             }
         }
 
-        //the right path fill
-        ShapePath{
+
+        // the right path fill
+        ShapePath {
             id: rightfill
             strokeColor: progress.progressColor
             fillColor: "transparent"
             strokeWidth: progress.progressWidth
             capStyle: progress.roundCap ? ShapePath.RoundCap : ShapePath.FlatCap
 
-            PathAngleArc{
+            PathAngleArc {
                 radiusX: (progress.width / 2) - (progress.progressWidth / 2)
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: progress.rightStartAngle
-                sweepAngle: (300 / progress.maxValue * progress.value)
+                startAngle: -(progress.rightStartAngle)
+                sweepAngle: -(300 / progress.maxValue * progress.value)
             }
         }
+
 
     }
 }
