@@ -6,5 +6,13 @@
         <file>asserts/dark/list_selected.png</file>
         <file>asserts/dark/top_curtain_drag.png</file>
         <file>asserts/dark/top_curtain_drag_back.png</file>
+        <file>asserts/light/humidity.png</file>
+        <file>asserts/light/temperaturepng</file>
+        <file>asserts/com/icons8-temperature-100.png</file>
+        <file>asserts/com/icons8-temperature-100(1).png</file>
+        <file>asserts/com/ihumidity.png</file>
+        <file>asserts/com/ihumidity_e.png</file>
+        <file>asserts/com/temperature.png</file>
+        <file>asserts/com/warning.png</file>
     </qresource>
 </RCC>
