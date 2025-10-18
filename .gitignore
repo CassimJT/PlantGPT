@@ -1,3 +1,42 @@
+# Build directories
+build/
+Debug/
+Release/
+*.pro.user
+*.autosave
+
+# Qt
+*.qmlc
+*.jsc
+moc_*
+qrc_*
+ui_*
+*.qm
+*.qrc
+
+# Qt Creator
+*.creator.user
+*.config
+
+# Compiled files
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.gch
+*.pch
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# QML
+qmlcache_loader.cpp
+
 # C++ objects and libs
 *.slo
 *.lo
@@ -52,3 +91,15 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.lnk
+
+# Project specific
+*.tmp
+*.orig
+*~
