@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>qtquickcontrols2.conf</file>
+        <file>asserts/dark/curtain_shadow_handle.png</file>
+        <file>asserts/dark/list.png</file>
+        <file>asserts/dark/list_selected.png</file>
+        <file>asserts/dark/top_curtain_drag.png</file>
+        <file>asserts/dark/top_curtain_drag_back.png</file>
     </qresource>
 </RCC>

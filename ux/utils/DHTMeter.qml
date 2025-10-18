@@ -1,5 +1,7 @@
 import QtQuick
 import QtQuick.Shapes
+import QtQuick.Layouts
+import QtQuick.Controls
 
 
 Item {
@@ -10,28 +12,48 @@ Item {
     // Properties
     // General
     property bool roundCap: true
-    property int startAngle: -260
-    property int sweepAngle: 160
-    property real maxValue: 83.33
-    property real value: 3
+    property int progressWidth: 16
     property int samples: 4
+    property bool textShowValue: true
+    property string textFontFamily: "Segoe UI"
+    property int textSize: 12
+    property color textColor: "#7c7c7c"
     // Bg Circle
     property color bgColor: "transparent"
     property color bgStrokeColor: "#7e7e7e"
     property int strokeBgWidth: 16
     // Progress Circle
-    property color progressColor: "#55aaff"
-    property int progressWidth: 16
-    // Text
-    property string text: "°C"
-    property bool textShowValue: true
-    property string textFontFamily: "Segoe UI"
-    property int textSize: 12
-    property color textColor: "#7c7c7c"
+    property color t_progressColor: "#55aaff"
+    property color h_progressColor: "#f50057"
 
-    //the righthalf property
-    property int rightStartAngle: -80
-    property int rightSweepAngle: 160
+    //
+    property bool isTempCritical: false
+
+    // Text
+    property string t_unit: "°C"
+    property string h_unit: "%"
+
+    //progress start & end
+    property int h_startAngle: -80
+    property int h_sweepAngle: 160
+    property int t_startAngle: -260
+    property int t_sweepAngle: 160
+
+    //maximum progress
+    property real t_maxValue: 83.33
+    property real h_maxValue: 100
+
+    //progress values
+    property real t_value: 30
+    property real h_value: 50
+
+    //Images
+    property real iconSize: 32
+
+    //imageIcons
+    property color stateLableColor: "Cyan"
+    property color valuesLableColor: "Gray"
+    property real valuesLableSize: 12
 
     //dotted line
     Canvas {
@@ -64,9 +86,9 @@ Item {
         anchors.fill: parent
         layer.enabled: true
         layer.samples: progress.samples
-        //the right half
+        //temperature
         ShapePath{
-            id: lefHalfBG
+            id: temperature
             strokeColor: progress.bgStrokeColor
             fillColor: progress.bgColor
             strokeWidth: progress.strokeBgWidth
@@ -77,13 +99,13 @@ Item {
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: progress.startAngle
-                sweepAngle: progress.sweepAngle
+                startAngle: progress.t_startAngle
+                sweepAngle: progress.t_sweepAngle
             }
         }
-        //the left half
+        //humidity
         ShapePath{
-            id: rightHalf
+            id: humidity
             strokeColor: progress.bgStrokeColor
             fillColor: progress.bgColor
             strokeWidth: progress.strokeBgWidth
@@ -94,14 +116,14 @@ Item {
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: progress.rightStartAngle
-                sweepAngle: progress.rightSweepAngle
+                startAngle: progress.h_startAngle
+                sweepAngle: progress.h_sweepAngle
             }
         }
-        //nthe left path fill
+        //temperature fill
         ShapePath{
-            id: path
-            strokeColor: progress.progressColor
+            id: temperatureFill
+            strokeColor: progress.t_progressColor
             fillColor: "transparent"
             strokeWidth: progress.progressWidth
             capStyle: progress.roundCap ? ShapePath.RoundCap : ShapePath.FlatCap
@@ -111,16 +133,16 @@ Item {
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: progress.startAngle
-                sweepAngle: (300 / progress.maxValue * progress.value)
+                startAngle: progress.t_startAngle
+                sweepAngle: (progress.t_sweepAngle / progress.t_maxValue * progress.t_value)
             }
         }
 
 
-        // the right path fill
+        // humidity fill
         ShapePath {
-            id: rightfill
-            strokeColor: progress.progressColor
+            id: humidityFill
+            strokeColor: progress.h_progressColor
             fillColor: "transparent"
             strokeWidth: progress.progressWidth
             capStyle: progress.roundCap ? ShapePath.RoundCap : ShapePath.FlatCap
@@ -130,12 +152,101 @@ Item {
                 radiusY: (progress.height / 2) - (progress.progressWidth / 2)
                 centerX: progress.width / 2
                 centerY: progress.height / 2
-                startAngle: -(progress.rightStartAngle)
-                sweepAngle: -(300 / progress.maxValue * progress.value)
+                startAngle: -(progress.h_startAngle)
+                sweepAngle: -(progress.h_sweepAngle / progress.h_maxValue * progress.h_value)
+            }
+        }
+        //waring image
+        Image {
+            id: warning
+            width: 52
+            height: 52
+            visible: isTempCritical
+            source: "qrc:/asserts/com/warning.png"
+            fillMode: Image.PreserveAspectFit
+            anchors {
+                bottom: rowLayout.top
+                horizontalCenter: rowLayout.horizontalCenter
+            }
+        }
+        //imageIcons
+        RowLayout {
+            id:rowLayout
+            anchors.centerIn: parent
+            spacing: 8
+            //temp
+            ColumnLayout{
+                spacing: 10
+                Image {
+                    id: tempImage
+                    Layout.preferredWidth:  progress.iconSize
+                    Layout.preferredHeight:  progress.iconSize
+                    source: "qrc:/asserts/com/temperature.png"
+                    fillMode: Image.PreserveAspectFit
+                    Layout.alignment: Qt.AlignHCenter
+                }
+                Label{
+                    id: tempValue
+                    text: progress.t_value + t_unit
+                    font.pointSize: progress.valuesLableSize
+                    color: progress.valuesLableColor
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+            }
+            Label{
+                id: state
+                text: "OFF"
+                font.pointSize: 19
+                font.bold: true
+                color: progress.stateLableColor
+            }
+            //humidity
+            ColumnLayout{
+                spacing: 10
+                Image {
+                    id: humImage
+                    Layout.preferredWidth:  progress.iconSize
+                    Layout.preferredHeight:  progress.iconSize
+                    source: "qrc:/asserts/com/ihumidity_e.png"
+                    fillMode: Image.PreserveAspectFit
+                    Layout.alignment: Qt.AlignHCenter
+                }
+                Label{
+                    id: humValue
+                    text: progress.h_value + h_unit
+                    font.pointSize: progress.valuesLableSize
+                    color: progress.valuesLableColor
+                    Layout.alignment: Qt.AlignHCenter
+                }
+            }
+
+        }
+        Label {
+            text: "Heating"
+            visible: t_value > 40
+            anchors {
+                top: rowLayout.bottom
+                topMargin: 10
+                horizontalCenter: rowLayout.horizontalCenter
             }
         }
 
 
+    }
+
+    Timer{
+        id:timer
+        running: true
+        interval: 1000
+        repeat: true
+        onTriggered: {
+           if(t_value > 40) {
+                isTempCritical = !isTempCritical
+           }else {
+               isTempCritical = false
+           }
+        }
     }
 }
 

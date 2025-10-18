@@ -53,6 +53,7 @@ qt_add_qml_module(appPlantGPT
             android/build.gradle
             android/res/values/libs.xml
             android/res/xml/qtprovider_paths.xml
+            QML_FILES ux/utils/Header.qml
 
 
 )
