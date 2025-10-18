@@ -1,9 +1,11 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Material
 import "./ux/utils"
 ApplicationWindow {
-    width: 640
-    height: 480
+    id: root
+    width: 350
+    height: 580
     visible: true
     title: qsTr("PlantGPT")
     flags: {
@@ -13,9 +15,28 @@ ApplicationWindow {
             return Qt.Window
         }
     }
+    //defalte themes
+    Material.theme: Material.Dark
+    Material.primary : "black"
+    Material.accent : "#FF9800"
+    Material.background:  "#333"
 
-    DHTMeter {
-        anchors.centerIn: parent
+    header: Header {
+        //header
+        onSwitchClicked: {
+            if (Material.theme === Material.Light) {
+                Material.theme = Material.Dark
+                Material.primary = "black"
+                Material.accent = "#FF9800"
+                root.Material.background = "#333"
+            } else {
+                Material.theme = Material.Light
+                Material.primary = "#2196F3"
+                Material.accent = "#FF9800"
+                root.Material.background =  "#fafafa"
+
+            }
+        }
     }
 
 }
