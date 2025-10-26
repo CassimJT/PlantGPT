@@ -14,5 +14,20 @@
         <file>asserts/com/ihumidity_e.png</file>
         <file>asserts/com/temperature.png</file>
         <file>asserts/com/warning.png</file>
+        <file>asserts/dark/menu.png</file>
+        <file>asserts/light/menu.png</file>
+        <file>asserts/com/adimage.png</file>
+        <file>asserts/com/camera-green.png</file>
+        <file>asserts/com/gallery.png</file>
+        <file>asserts/light/top_curtain_drag.png</file>
+        <file>asserts/light/top_curtain_drag_back.png</file>
+        <file>asserts/com/home.png</file>
+        <file>asserts/com/sensors.png</file>
+        <file>asserts/dark/back.png</file>
+        <file>asserts/light/back.png</file>
+        <file>asserts/com/image.png</file>
+        <file>asserts/com/upload.png</file>
+        <file>asserts/com/retake.png</file>
+        <file>asserts/com/cancel.png</file>
     </qresource>
 </RCC>

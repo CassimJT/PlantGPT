@@ -2,6 +2,8 @@
 #define ANDROIDSYSTEM_H
 
 #include <QObject>
+#include <QPermission>
+#include <QtCore>
 
 class AndroidSystem : public QObject
 {
@@ -9,7 +11,12 @@ class AndroidSystem : public QObject
 public:
     explicit AndroidSystem(QObject *parent = nullptr);
 
+public slots:
+
 signals:
+
+private:
+    void requestCameraPeremision();
 };
 
 #endif // ANDROIDSYSTEM_H

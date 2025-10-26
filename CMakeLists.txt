@@ -19,7 +19,9 @@ else()
     set(OpenCV_DIR "$ENV{HOME}/CISociety/Libs/opencv-install/lib/cmake/opencv4")
 endif()
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick Multimedia Concurrent)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup(REQUIRES 6.8)
@@ -54,6 +56,17 @@ qt_add_qml_module(appPlantGPT
             android/res/values/libs.xml
             android/res/xml/qtprovider_paths.xml
             QML_FILES ux/utils/Header.qml
+            QML_FILES ux/utils/Utils.js
+            QML_FILES ux/Screens/HomeScreen.qml
+            QML_FILES ux/home/MainStackView.qml
+            QML_FILES ux/utils/AvataDrawerTools.qml
+            QML_FILES ux/Screens/CameraScreen.qml
+            QML_FILES ux/Pages/CameraPage.qml
+            QML_FILES ux/Pages/HomePage.qml ux/Pages/SensorPage.qml
+            QML_FILES ux/utils/ImagePreview.qml
+            SOURCES core/sources/myhelper.h core/sources/myhelper.cpp
+
+
 
 
 )
@@ -70,9 +83,10 @@ set_target_properties(appPlantGPT PROPERTIES
 )
 
 target_link_libraries(appPlantGPT
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick Qt6::Multimedia   Qt6::Concurrent
 )
 target_link_libraries(appPlantGPT PRIVATE Qt6::Core)
+
 set_property(TARGET appPlantGPT APPEND PROPERTY
     QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android
 )

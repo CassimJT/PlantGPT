@@ -1,8 +1,0 @@
-module PlantGPT
-typeinfo appPlantGPT.qmltypes
-prefer :/qt/qml/PlantGPT/
-Main 1.0 Main.qml
-CircularProgressBar 1.0 ux/utils/CircularProgressBar.qml
-DHTMeter 1.0 ux/utils/DHTMeter.qml
-depends QtQuick
-

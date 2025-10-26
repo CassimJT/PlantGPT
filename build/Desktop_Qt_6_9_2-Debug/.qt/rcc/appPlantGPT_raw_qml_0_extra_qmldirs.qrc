@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/PlantGPT/">
-    <file alias="ux/utils/qmldir">/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/PlantGPT/ux/utils/qmldir</file>
-  </qresource>
-</RCC>
-

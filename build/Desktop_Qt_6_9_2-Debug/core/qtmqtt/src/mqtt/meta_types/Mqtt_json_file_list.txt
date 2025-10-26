@@ -1,4 +1,0 @@
-/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/include/../EWIEGA46WW/moc_qmqttclient.cpp.json
-/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/include/../EWIEGA46WW/moc_qmqttconnection_p.cpp.json
-/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/include/../EWIEGA46WW/moc_qmqttmessage.cpp.json
-/home/csociety/CISociety/Qt/Projects/PlantGPT/PlantGPT/build/Desktop_Qt_6_9_2-Debug/core/qtmqtt/src/mqtt/Mqtt_autogen/include/../EWIEGA46WW/moc_qmqttsubscription.cpp.json
