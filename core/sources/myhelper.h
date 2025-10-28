@@ -7,7 +7,11 @@
 #include <QBuffer>
 #include <QString>
 #include <QtConcurrent>
-
+#include <QUrl>
+#if defined(Q_OS_ANDROID)
+#include <QJniObject>
+#include <QJniEnvironment>
+#endif
 
 
 class MyHelper : public QObject
@@ -24,6 +28,10 @@ public slots:
 
     void imageToDataUrl(const QImage &image);
 
+    void loadImageFromContentUri(const QString &uri);
+
+    QString localFilePath();
+
     QString imagePreview();
 
 
@@ -33,6 +41,7 @@ signals:
 
 private:
     QString m_imagePath;
+    QString m_localPath;
     bool isHompage;
 
 };

@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls
 import QtQuick.Controls.Material
 import QtQuick.Layouts
+import QtQuick.Dialogs
 
 import "../utils"
 import QtCore
@@ -10,8 +11,8 @@ Page {
     id: homeScreen
     objectName: "Home"
     property bool isDark: false
-    property bool isDialogOpen: false
-// -----welcom text section -----
+    property string imageSource: ""
+    // -----welcom text section -----
     Column {
         id: column
         width: parent.width * 0.8
@@ -43,10 +44,9 @@ Page {
             }
         }
 
-
         RoundButton {
             id: addFileButton
-            width: 80
+            width: 90
             height: width
             radius: width / 2
             anchors.horizontalCenter: parent.horizontalCenter
@@ -55,8 +55,8 @@ Page {
             Image {
                 id: addImageIcon
                 source: "qrc:/asserts/com/adimage.png"
-                width: 36
-                height: 36
+                width: 42
+                height: width
                 fillMode: Image.PreserveAspectFit
                 anchors.centerIn: parent
             }
@@ -68,7 +68,7 @@ Page {
             }
         }
     }
-// -------- ImagePreview section
+    // -------- ImagePreview section
     ColumnLayout {
         id: preveiwColumn
         spacing: 20
@@ -128,7 +128,7 @@ Page {
 
     }
 
-//-------drawer section --------
+    //-------drawer section --------
     Drawer {
         id: avataDrawer
         width: parent.width
@@ -160,28 +160,48 @@ Page {
             onCameraClicked: {
                 console.log("Camera clicked")
                 //open camea Page
-                helper.setIsHompage(false)
+                Helper.setIsHompage(false)
                 mainStackView.push("../Screens/CameraScreen.qml")
                 avataDrawer.close()
 
             }
             onGalaryClicked: {
                 console.log("Gallery Clicked")
+                fileDialog.open()
                 avataDrawer.close()
             }
         }
     }
 
     //--------dialgo section-----
+    FileDialog {
+        id: fileDialog
+        title: "Select an Image"
+        onAccepted: {
+            console.log("Selected file:", fileDialog.selectedFile);
+            var path = fileDialog.selectedFile
+            Helper.loadImageFromContentUri(path)
+            preveiwColumn.visible = true
+            loading.visible = true
+            // Process the selected file URL
+        }
+
+        onRejected: {
+            console.log("File selection canceled.");
+        }
+    }
+
+    //----connection section ---------------
     Connections {
-        target: helper
+        target: Helper
         function onImageReady() {
-            var preview = helper.imagePreview()
-            imagePreview.preview = preview
+            var preview = Helper.imagePreview()
+            var path = Helper.localFilePath()
+            imagePreview.preview = preview || path
             loading.visible  = false
         }
         function onIsHompageChanged() {
-            var state = helper.isHompage
+            var state = Helper.isHompage
             if(state) {
                 preveiwColumn.visible = true
                 loading.visible = true

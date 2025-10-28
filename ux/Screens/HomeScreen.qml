@@ -31,7 +31,7 @@ Page {
 
                     Image {
                         source: "qrc:/asserts/com/home.png"
-                        width: 44
+                        width: 38
                         height: width
                         fillMode: Image.PreserveAspectFit
                     }
@@ -61,7 +61,7 @@ Page {
 
                     Image {
                         source: "qrc:/asserts/com/sensors.png"
-                        width: 60
+                        width: 38
                         height: width
                         fillMode: Image.PreserveAspectFit
                     }

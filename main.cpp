@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     AndroidSystem android;
     MyHelper helper;
     engine.rootContext()->setContextProperty("Android",&android);
-    engine.rootContext()->setContextProperty("helper",&helper);
+    engine.rootContext()->setContextProperty("Helper",&helper);
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

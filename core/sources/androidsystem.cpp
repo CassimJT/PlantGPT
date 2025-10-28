@@ -5,8 +5,33 @@ AndroidSystem::AndroidSystem(QObject *parent)
 {
 #if defined(Q_OS_ANDROID)
     requestCameraPeremision();
+    requestReadExternalStorage();
 #endif
 }
+
+/**
+ * @brief AndroidSystem::openGallery
+ * open gallarry
+ */
+void AndroidSystem::openGallery()
+{
+#if defined(Q_OS_ANDROID)
+    QJniObject activity = QNativeInterface::QAndroidApplication::context();
+    if (!activity.isValid()) {
+        qWarning() << "Failed to get Android activity";
+        return;
+    }
+
+    QJniObject::callStaticMethod<void>(
+        "com/plantGPT/GalleryHandler",
+        "openGallery",
+        "(Landroid/app/Activity;)V",
+        activity.object<jobject>()
+        );
+#endif
+}
+
+
 
 void AndroidSystem::requestCameraPeremision()
 {
@@ -23,3 +48,28 @@ void AndroidSystem::requestCameraPeremision()
 
     });
 }
+
+
+void AndroidSystem::requestReadExternalStorage()
+{
+#if defined(Q_OS_ANDROID)
+    // Get the Qt Android activity
+    qDebug() << "Invoking the request";
+    QJniObject activity = QNativeInterface::QAndroidApplication::context();
+
+    if (!activity.isValid()) {
+        qWarning() << "Failed to get Android activity";
+        return;
+    }
+
+    // Call the Java method to request storage permission
+    QJniObject::callStaticMethod<void>(
+        "com/plantGPT/RequestReadExternalStorage",
+        "requestStoragePermission",
+        "(Landroid/app/Activity;)V",
+        activity.object<jobject>()
+        );
+#endif
+}
+
+

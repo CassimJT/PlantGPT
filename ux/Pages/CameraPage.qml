@@ -35,8 +35,8 @@ Page {
             quality: ImageCapture.NormalQuality
             onImageCaptured: function(requestId, preview) {
                 console.log("Image preview captured")
-                helper.imageToDataUrl(preview)
-                helper.setIsHompage(true)
+                Helper.imageToDataUrl(preview)
+                Helper.setIsHompage(true)
                 camera.stop()
                 mainLoader.item.mainStackView.pop()
             }
