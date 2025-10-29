@@ -26,7 +26,7 @@ if(ANDROID)
     # ExecuTorch minimal configuration
     # -------------------------
     # Disable optional modules/extensions
-
+    #set(EXECUTORCH_BUILD_PRESET_FILE ${CMAKE_SOURCE_DIR}/executorch/tools/cmake/preset/llm.cmake)
     set(EXECUTORCH_BUILD_EXTENSION_LLM OFF CACHE BOOL "Disable LLM extension")
     set(EXECUTORCH_BUILD_EXTENSION_EVALUATION OFF CACHE BOOL "Disable evaluation extensions")
     set(EXECUTORCH_BUILD_EXTENSION_RUNNER OFF CACHE BOOL "Disable runner extensions")
@@ -34,6 +34,17 @@ if(ANDROID)
     set(EXECUTORCH_BUILD_TESTS OFF CACHE BOOL "Disable tests")
     set(EXECUTORCH_BUILD_PORTABLE_OPS OFF CACHE BOOL "Disable portable ops for Android")
     set(EXECUTORCH_ENABLE_PORTABLE_KERNELS OFF CACHE BOOL "Disable portable kernels for Android")
+    # Backends
+    set(EXECUTORCH_BUILD_XNNPACK ON CACHE BOOL "Enable XNNPACK backend for Android")
+    set(EXECUTORCH_BUILD_QNN OFF CACHE BOOL "")
+    set(EXECUTORCH_BUILD_VULKAN OFF CACHE BOOL "")
+    # Core high-level extensions + dep chain (passes checks)
+    set(EXECUTORCH_BUILD_EXTENSION_MODULE ON CACHE BOOL "Enable Module API extension")
+    set(EXECUTORCH_BUILD_EXTENSION_TENSOR ON CACHE BOOL "Enable Tensor convenience APIs")
+    set(EXECUTORCH_BUILD_EXTENSION_DATA_LOADER ON CACHE BOOL "Req for Module")
+    set(EXECUTORCH_BUILD_EXTENSION_FLAT_TENSOR ON CACHE BOOL "Req for Module")
+    set(EXECUTORCH_BUILD_EXTENSION_NAMED_DATA_MAP ON CACHE BOOL "Req for Module")
+    set(EXECUTORCH_ENABLE_LOGGING OFF CACHE BOOL "Disable logging")
 
 else()
     message(STATUS ">>> Building for Desktop Linux <<<")
@@ -131,6 +142,7 @@ target_link_libraries(appPlantGPT
     executorch
     executorch::backends
     executorch::extensions
+   # executorch::kernels
 
 )
 
