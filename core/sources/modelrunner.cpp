@@ -14,13 +14,6 @@ ModelRunner::ModelRunner(QObject *parent)
  * @param imagePath
  * @return Inference result as QString
  */
-#include <QFile>
-#include <QByteArray>
-#include <QBuffer>
-
-#include <vector>
-#include <algorithm>  // For std::max_element
-#include <cmath>      // For exp, log (but we use exp only)
 
 QString ModelRunner::classifyImage(const QString &imageDataBase64)
 {

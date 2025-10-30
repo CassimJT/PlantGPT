@@ -14,6 +14,11 @@
 #include <QStandardPaths>
 #include <QFile>
 #include <QDir>
+#include <QByteArray>
+#include <QBuffer>
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
 using namespace ::executorch::extension;
 using namespace ::executorch::runtime;
