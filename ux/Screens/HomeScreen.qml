@@ -30,7 +30,7 @@ Page {
                     anchors.centerIn: parent
 
                     Image {
-                        source: "qrc:/asserts/com/home.png"
+                        source: "qrc:/assets/com/home.png"
                         width: 38
                         height: width
                         fillMode: Image.PreserveAspectFit
@@ -60,7 +60,7 @@ Page {
                     anchors.centerIn: parent
 
                     Image {
-                        source: "qrc:/asserts/com/sensors.png"
+                        source: "qrc:/assets/com/sensors.png"
                         width: 38
                         height: width
                         fillMode: Image.PreserveAspectFit

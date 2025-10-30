@@ -31,15 +31,15 @@ Item {
                         source: {
                             if(mainLoader.item && mainLoader.item.mainStackView.depth > 1) {
                                 if(Material.theme === Material.Dark ) {
-                                    return "qrc:/asserts/dark/back.png"
+                                    return "qrc:/assets/dark/back.png"
                                 } else if(Material.theme === Material.Light){
-                                    return "qrc:/asserts/light/back.png"
+                                    return "qrc:/assets/light/back.png"
                                 }
                             } else {
                                 if(Material.theme === Material.Light ) {
-                                    return "qrc:/asserts/light/menu.png"
+                                    return "qrc:/assets/light/menu.png"
                                 } else if(Material.theme === Material.Dark){
-                                    return "qrc:/asserts/dark/menu.png"
+                                    return "qrc:/assets/dark/menu.png"
                                 }
                             }
 
@@ -83,7 +83,7 @@ Item {
         width: 152
         height: 45
         opacity: 0.5
-        source: header.height > root.h_height ? "qrc:/asserts/dark/top_curtain_drag_back.png": "qrc:/asserts/dark/top_curtain_drag.png"
+        source: header.height > root.h_height ? "qrc:/assets/dark/top_curtain_drag_back.png": "qrc:/assets/dark/top_curtain_drag.png"
         fillMode: Image.PreserveAspectFit
         anchors {
             top: header.bottom

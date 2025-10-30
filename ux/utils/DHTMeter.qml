@@ -162,7 +162,7 @@ Item {
             width: 52
             height: 52
             visible: isTempCritical
-            source: "qrc:/asserts/com/warning.png"
+            source: "qrc:/assets/com/warning.png"
             fillMode: Image.PreserveAspectFit
             anchors {
                 bottom: rowLayout.top
@@ -181,7 +181,7 @@ Item {
                     id: tempImage
                     Layout.preferredWidth:  progress.iconSize
                     Layout.preferredHeight:  progress.iconSize
-                    source: "qrc:/asserts/com/temperature.png"
+                    source: "qrc:/assets/com/temperature.png"
                     fillMode: Image.PreserveAspectFit
                     Layout.alignment: Qt.AlignHCenter
                 }
@@ -208,7 +208,7 @@ Item {
                     id: humImage
                     Layout.preferredWidth:  progress.iconSize
                     Layout.preferredHeight:  progress.iconSize
-                    source: "qrc:/asserts/com/ihumidity_e.png"
+                    source: "qrc:/assets/com/ihumidity_e.png"
                     fillMode: Image.PreserveAspectFit
                     Layout.alignment: Qt.AlignHCenter
                 }

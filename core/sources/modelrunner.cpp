@@ -6,7 +6,7 @@ ModelRunner::ModelRunner(QObject *parent)
     isModelLoaded(false)
 {
     // Constructor
-    // loadModel();  // Uncomment to auto-load on init
+     loadModel();
 }
 
 /**
@@ -14,38 +14,85 @@ ModelRunner::ModelRunner(QObject *parent)
  * @param imagePath
  * @return Inference result as QString
  */
-QString ModelRunner::classifyImage(const QString &imagePath)
+#include <QFile>
+#include <QByteArray>
+#include <QBuffer>
+
+#include <vector>
+#include <algorithm>  // For std::max_element
+#include <cmath>      // For exp, log (but we use exp only)
+
+QString ModelRunner::classifyImage(const QString &imageDataBase64)
 {
-    if (!isModelLoaded) {
-        return "Model not loaded.";
+    QString filePath;
+    if (imageDataBase64.startsWith("data:image")) {
+        QByteArray data = QByteArray::fromBase64(imageDataBase64.split(',')[1].toUtf8());
+        filePath = QStandardPaths::writableLocation(QStandardPaths::TempLocation) + "/temp_image.png";
+        QFile file(filePath);
+        if (!file.open(QIODevice::WriteOnly)) return "Failed to write temp file.";
+        file.write(data);
+        file.close();
+    } else {
+        filePath = imageDataBase64;
     }
-    cv::Mat img = cv::imread(imagePath.toStdString());
-    if (img.empty()) {
-        return "Failed to load image.";
-    }
+    cv::Mat img = cv::imread(filePath.toStdString());
+    if (img.empty()) return "Failed to load image.";
+
     auto input = preprocess(img);
-    if (!input) {
-        return "Preprocessing failed.";
-    }
-    // Use vector<EValue> overload to avoid ambiguity
+    if (!input) return "Preprocessing failed.";
+
+    if (!isModelLoaded || !module) return "Model not loaded.";
+
     const auto result = module->forward(std::vector<EValue>{EValue(*input)});
-    if (!result.ok()) {
-        // Fix: Error is enum; cast to int for code
-        return QString("Inference failed: Error code %1").arg(static_cast<int>(result.error()));
-    }
+    if (!result.ok()) return QString("Inference failed: Error code %1").arg(static_cast<int>(result.error()));
+
     const auto& outputTensor = result->at(0).toTensor();
     const float* output = outputTensor.const_data_ptr<float>();
     int numOutputs = outputTensor.numel();
-    // Fix: Loop for sizes (no direct << overload)
-    qDebug() << "Output shape: [";
-    for (auto s : outputTensor.sizes()) {
-        qDebug() << s << " ";
-    }
-    qDebug() << "]";
+
+    if (numOutputs != 38) return QString("Unexpected output size: %1 (expected 38)").arg(numOutputs);
+
     qDebug() << "Num elements:" << numOutputs;
-    qDebug() << "Output[0] =" << output[0];
-    // Example: Return top score (adjust for argmax/class names)
-    return QString("Inference result: %1 (shape: %2)").arg(output[0]).arg(numOutputs);
+
+    // Softmax: Convert logits to probabilities
+    std::vector<float> probs(numOutputs);
+    float maxLogit = *std::max_element(output, output + numOutputs);
+    float sumExp = 0.0f;
+    for (int i = 0; i < numOutputs; ++i) {
+        probs[i] = std::exp(output[i] - maxLogit);  // Subtract max for numerical stability
+        sumExp += probs[i];
+    }
+    for (int i = 0; i < numOutputs; ++i) {
+        probs[i] /= sumExp;
+    }
+
+    // Find top class
+    auto maxIt = std::max_element(probs.begin(), probs.end());
+    int topClassIdx = std::distance(probs.begin(), maxIt);
+    float topConfidence = *maxIt * 100.0f;  // As percentage
+
+    qDebug() << "Top class index:" << topClassIdx << "Confidence:" << topConfidence << "%";
+
+    // PlantVillage 38 labels (standard order)
+    QStringList labels = {
+        "Apple___Apple_scab", "Apple___Black_rot", "Apple___Cedar_apple_rust", "Apple___healthy",
+        "Blueberry___healthy", "Cherry_(including_sour)___Powdery_mildew", "Cherry_(including_sour)___healthy",
+        "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot", "Corn_(maize)___Common_rust_",
+        "Corn_(maize)___Northern_Leaf_Blight", "Corn_(maize)___healthy",
+        "Grape___Black_rot", "Grape___Esca_(Black_Measles)", "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)", "Grape___healthy",
+        "Orange___Haunglongbing_(Citrus_greening)", "Peach___Bacterial_spot", "Peach___healthy",
+        "Pepper,_bell___Bacterial_spot", "Pepper,_bell___healthy",
+        "Potato___Early_blight", "Potato___Late_blight", "Potato___healthy",
+        "Raspberry___healthy", "Soybean___healthy",
+        "Squash___Powdery_mildew",
+        "Strawberry___Leaf_scorch", "Strawberry___healthy",
+        "Tomato___Bacterial_spot", "Tomato___Early_blight", "Tomato___Late_blight", "Tomato___Leaf_Mold",
+        "Tomato___Septoria_leaf_spot", "Tomato___Spider_mites Two-spotted_spider_mite", "Tomato___Target_Spot",
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus", "Tomato___Tomato_mosaic_virus", "Tomato___healthy"
+    };
+
+    QString label = labels.value(topClassIdx, "Unknown");
+    return QString("Predicted: %1 (%.1f%% confidence)").arg(label).arg(topConfidence);
 }
 
 /**
@@ -174,21 +221,35 @@ cv::Mat ModelRunner::qImageToMat(const QImage &image)
  */
 QString ModelRunner::prepareModelFile()
 {
-    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/plant_disease_model.pt";
+    QString targetPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
+    + "/plant_disease_model.pte";
+
     if (QFile::exists(targetPath)) {
         return targetPath;
     }
-    QString sourcePath = "asserts:/model/plant_disease_model.pt";
+
+#ifdef Q_OS_ANDROID
+    QString sourcePath = "assets:/model/plant_disease_model.pte";
+#else
+   // QString sourcePath = "/home/cassim/Csociety/Qt/OpenCV/OPenCV/plant_disease_model.pte";
+#endif
+    QDir dir("assets:/model");
+    qDebug() << "Files in assets:/model:" << dir.entryList();
+
     QFile source(sourcePath);
     if (!source.exists()) {
-        qDebug() << "Model file does not exist in assets:" << sourcePath;
+        qDebug() << "Model file not found at:" << sourcePath;
         return {};
     }
+
     QDir().mkpath(QFileInfo(targetPath).path());
     if (!source.copy(targetPath)) {
-        qDebug() << "Failed to copy model to internal storage!";
+        qDebug() << "Failed to copy model to internal storage! Error:" << source.errorString();
         return {};
     }
+
     qDebug() << "Model copied to:" << targetPath;
     return targetPath;
+
 }
+

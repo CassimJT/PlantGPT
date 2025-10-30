@@ -35,6 +35,7 @@ private:
     TensorPtr preprocess(const cv::Mat &img);
     QImage matToQImage(const cv::Mat &mat);
     cv::Mat qImageToMat(const QImage &image);
+
     QString prepareModelFile();
 };
 

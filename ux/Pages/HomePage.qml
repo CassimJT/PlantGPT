@@ -54,7 +54,7 @@ Page {
 
             Image {
                 id: addImageIcon
-                source: "qrc:/asserts/com/adimage.png"
+                source: "qrc:/assets/com/adimage.png"
                 width: 42
                 height: width
                 fillMode: Image.PreserveAspectFit
@@ -96,7 +96,7 @@ Page {
                 width: 70
                 height: width
                 Image {
-                    source: "qrc:/asserts/com/cancel.png"
+                    source: "qrc:/assets/com/cancel.png"
                     width: 32
                     height: width
                     fillMode: Image.PreserveAspectFit
@@ -114,14 +114,14 @@ Page {
                 height: width
                 Image {
                     id: upload
-                    source: "qrc:/asserts/com/upload.png"
+                    source: "qrc:/assets/com/upload.png"
                     width: 32
                     height: width
                     fillMode: Image.PreserveAspectFit
                     anchors.centerIn: parent
                 }
                 onClicked: {
-
+                    uploadForInfarance()
                 }
             }
         }
@@ -207,5 +207,10 @@ Page {
                 loading.visible = true
             }
         }
+    }
+    // --------- Function ------------------------
+    function uploadForInfarance() {
+       var infarence = ModelRunner.classifyImage(Helper.imagePreview());
+        console.log(infarence)
     }
 }

@@ -8,8 +8,8 @@ RowLayout {
     anchors.centerIn: parent
     signal cameraClicked()
     signal galaryClicked()
-    property string cameraSrcImage: "qrc:/asserts/com/camera-green.png"
-    property string fileSrcimage: "qrc:/asserts/com/gallery.png"
+    property string cameraSrcImage: "qrc:/assets/com/camera-green.png"
+    property string fileSrcimage: "qrc:/assets/com/gallery.png"
 
     // Camera Section
     Column {
