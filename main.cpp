@@ -10,11 +10,14 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    MyHelper helper;
+    ModelRunner modelRunner;
+
 
     auto context = engine.rootContext();
     context->setContextProperty("Android", new AndroidSystem(&app));
-    context->setContextProperty("Helper", new MyHelper(&app));
-    context->setContextProperty("ModelRunner", new ModelRunner(&app));
+    context->setContextProperty("Helper", &helper);
+    context->setContextProperty("ModelRunner", &modelRunner);
 
     QObject::connect(
         &engine,

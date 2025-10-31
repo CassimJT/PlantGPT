@@ -121,6 +121,7 @@ Page {
                     anchors.centerIn: parent
                 }
                 onClicked: {
+                    loading.visible = true
                     uploadForInfarance()
                 }
             }
@@ -210,7 +211,20 @@ Page {
     }
     // --------- Function ------------------------
     function uploadForInfarance() {
-       var infarence = ModelRunner.classifyImage(Helper.imagePreview());
-        console.log(infarence)
+        ModelRunner.classifyImage(Helper.imagePreview());
+    }
+
+    Connections {
+        target: ModelRunner
+        //onInfarenceFinished:
+        function onInfarenceFinished () {
+            loading.visible = false
+            console.log(ModelRunner.diseaseName)
+            mainStackView.push("InfarenceResultPage.qml")
+        }
+        //when the infarence faild
+        function onInfarenceFaild() {
+
+        }
     }
 }
