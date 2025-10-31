@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     context->setContextProperty("Android", new AndroidSystem(&app));
     context->setContextProperty("Helper", &helper);
     context->setContextProperty("ModelRunner", &modelRunner);
-
+    qmlRegisterSingletonType(QUrl("qrc:/ux/models/HistoryModel.qml"), "HistoryModel", 1, 0, "HistoryModel");
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

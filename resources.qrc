@@ -29,5 +29,8 @@
         <file>assets/com/upload.png</file>
         <file>assets/com/retake.png</file>
         <file>assets/com/cancel.png</file>
+        <file>ux/models/HistoryModel.qml</file>
+        <file>assets/com/delete.png</file>
+        <file>assets/com/clear.png</file>
     </qresource>
 </RCC>

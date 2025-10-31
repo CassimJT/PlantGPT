@@ -122,6 +122,8 @@ qt_add_qml_module(appPlantGPT
         core/sources/modelrunner.h
         core/sources/modelrunner.cpp
         QML_FILES ux/Pages/InfarenceResultPage.qml
+        QML_FILES ux/Pages/InfarenceHistoryPage.qml
+        QML_FILES ux/delegates/HistoryDelegate.qml
 )
 
 # -------------------------

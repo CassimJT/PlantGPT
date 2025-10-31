@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Page {
-
+    property int classNumber: 0
     ScrollView {
         id: scrollView
         anchors {
@@ -87,6 +87,6 @@ Page {
     }
 
     Component.onCompleted:{
-        fadeInAnim.start()
+
     }
 }
