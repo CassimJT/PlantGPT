@@ -5,8 +5,7 @@ import HistoryModel 1.0
 ItemDelegate {
     id: itemDelegate
     width: parent.width
-    height: 60   // consistent row height for list
-
+    height: 50
     Row {
         anchors.fill: parent
         anchors {
@@ -17,7 +16,7 @@ ItemDelegate {
         // Disease Name
         Text {
             id: diseaseNameLabel
-            width: parent.width * 0.47
+            width: parent.width * 0.50
             text: diseaseName
             elide: Text.ElideRight
             font.pixelSize: 16
@@ -28,11 +27,11 @@ ItemDelegate {
         // Date
         Label {
             id: dateLabel
-            width: parent.width * 0.35
+            width: parent.width * 0.29
             text: date
             font.pixelSize: 14
             color: "#666"
-            horizontalAlignment: Text.AlignRight
+             horizontalAlignment: Text.AlignLeft
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -56,7 +55,10 @@ ItemDelegate {
     }
     onClicked: {
         //go to infareceHistor
-        mainLoader.item.mainStackView.push("../Pages/InfarenceHistoryPage.qml")
+        mainLoader.item.mainStackView.push("../Pages/InfarenceHistoryPage.qml",{
+                                               "classIndex":classIndex,
+                                                "diseaseName":diseaseName
+                                           })
         mainRoot.drawer.close()
     }
 }

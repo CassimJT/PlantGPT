@@ -90,6 +90,7 @@ void ModelRunner::classifyImage(const QString &imageDataBase64)
     setDescription(classDescripion(topClassIdx));
     setCure(classCure(topClassIdx));
     setConfidence(topConfidence);
+    setClassIndex(topClassIdx);
 
     emit infarenceFinished();
 
@@ -245,6 +246,26 @@ QString ModelRunner::classCure(int class_id)
 
     return cure_map.value(class_id, QString("No cure or prevention information available for class %1").arg(class_id));
 }
+/**
+ * @brief ModelRunner::classIndex
+ * @return
+ */
+int ModelRunner::classIndex() const
+{
+    return m_classIndex;
+}
+/**
+ * @brief ModelRunner::setClassIndex
+ * @param newClassIndex
+ */
+void ModelRunner::setClassIndex(int newClassIndex)
+{
+    if (m_classIndex == newClassIndex)
+        return;
+    m_classIndex = newClassIndex;
+    emit classIndexChanged();
+}
+
 /**
  * @brief ModelRunner::confidence
  * @return the infarence confidence

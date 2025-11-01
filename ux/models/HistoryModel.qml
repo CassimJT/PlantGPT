@@ -16,16 +16,6 @@ Item {
     ListModel {
         id: listmodel
 
-        ListElement { diseaseName: "Leaf Blight"; classIndex: 0; date: "2025-10-10" }
-        ListElement { diseaseName: "Powdery Mildew"; classIndex: 1; date: "2025-10-11" }
-        ListElement { diseaseName: "Root Rot"; classIndex: 2; date: "2025-10-12" }
-        ListElement { diseaseName: "Yellow Rust"; classIndex: 3; date: "2025-10-13" }
-        ListElement { diseaseName: "Bacterial Wilt"; classIndex: 4; date: "2025-10-14" }
-        ListElement { diseaseName: "Late Blight"; classIndex: 5; date: "2025-10-15" }
-        ListElement { diseaseName: "Downy Mildew"; classIndex: 6; date: "2025-10-16" }
-        ListElement { diseaseName: "Crown Gall"; classIndex: 7; date: "2025-10-17" }
-        ListElement { diseaseName: "Anthracnose"; classIndex: 8; date: "2025-10-18" }
-        ListElement { diseaseName: "Leaf Curl Virus"; classIndex: 9; date: "2025-10-19" }
     }
 
     // --- Model management functions ---
@@ -41,6 +31,7 @@ Item {
 
     function clearModel() {
         listmodel.clear()
+        persistHistory()
     }
 
     function modelSize() {
@@ -50,23 +41,30 @@ Item {
     function deleteHistory(index) {
         if (index >= 0 && index < listmodel.count)
             listmodel.remove(index)
+        persistHistory()
     }
 
     function persistHistory() {
-        let data = []
+        const data = []
+
         for (let i = 0; i < listmodel.count; i++) {
-            let field = listmodel.get(i)
+            const field = listmodel.get(i)
             if (field) data.push(field)
         }
 
-        let jsonData = JSON.stringify(data)
-        settings.setValue("historyModel", jsonData)
-        console.log("History persisted.")
+        try {
+            const jsonData = JSON.stringify(data)
+            settings.setValue("historyModel", jsonData)
+            console.log("History persisted.")
+        } catch (error) {
+            console.log(`Error stringifying data: ${error}`)
+        }
     }
 
     function loadHistory() {
-        let savedData = settings.value("historyModel", "[]")
+        const savedData = settings.value("historyModel", "[]")
         let parsedData
+
         try {
             parsedData = JSON.parse(savedData)
         } catch (error) {
@@ -74,12 +72,14 @@ Item {
             return
         }
 
-        if (Array.isArray(parsedData) && parsedData.length > 0) {
-            clearModel()
-            parsedData.forEach(item => listmodel.append(item))
-            console.log("History loaded.")
-        } else {
+        if (!Array.isArray(parsedData) || parsedData.length === 0) {
             console.log("No saved data found.")
+            return
         }
+
+        clearModel()
+        parsedData.forEach(item => listmodel.append(item))
+        console.log("History loaded.")
     }
+
 }

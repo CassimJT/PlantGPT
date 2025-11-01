@@ -6,6 +6,8 @@ import "./ux/Screens"
 import "./ux/home"
 import "./ux/delegates"
 import HistoryModel 1.0
+import QtQuick.Dialogs
+import QtCore
 ApplicationWindow {
     id: mainRoot
     width: 350
@@ -14,6 +16,7 @@ ApplicationWindow {
     title: qsTr("PlantGPT")
     property bool isDarkTheme: false
     property alias drawer: drawer
+    property bool exitConfirmed: false
     flags: {
         if(Qt.platform.os === "android"){
             return Qt.FramelessWindowHint | Qt.Window | Qt.MaximizeUsingFullscreenGeometryHint
@@ -106,45 +109,76 @@ ApplicationWindow {
                 bottomMargin: 10
             }
         }
-       ListView {
-           id: view
-           clip: true
-           model: HistoryModel.listmodel
-           delegate: HistoryDelegate{}
+        ListView {
+            id: view
+            clip: true
+            model: HistoryModel.listmodel
+            delegate: HistoryDelegate{}
 
-           anchors {
-               top: hisoryLable.bottom
-               right: parent.right
-               bottom: parent.bottom
-               left: frame.right
-           }
+            anchors {
+                top: hisoryLable.bottom
+                right: parent.right
+                bottom: parent.bottom
+                left: frame.right
+            }
 
-       }
-       RoundButton {
-           id: roundBtn
-           width: 56
-           height: width
-           z: 10
-           radius: width / 2
-           Material.elevation: 8
-           anchors {
-               right: parent.right
-               bottom: parent.bottom
-               rightMargin: 25
-           }
+        }
+        RoundButton {
+            id: roundBtn
+            width: 56
+            height: width
+            z: 10
+            radius: width / 2
+            Material.elevation: 8
+            anchors {
+                right: parent.right
+                bottom: parent.bottom
+                rightMargin: 25
+            }
 
-           Image {
-               id: clear
-               source: "qrc:/assets/com/clear.png"
-               width: 28
-               height: width
-               anchors.centerIn: parent
-               fillMode: Image.PreserveAspectFit
-           }
+            Image {
+                id: clear
+                source: "qrc:/assets/com/clear.png"
+                width: 28
+                height: width
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+            }
 
-           onClicked: {
-               HistoryModel.clearModel()
-           }
+            onClicked: {
+                HistoryModel.clearModel()
+            }
+        }
+       Component.onCompleted: {
+           HistoryModel.loadHistory()
        }
     }
+
+
+    Dialog {
+        id: confirmExitDialog
+        title: "Exit Application?"
+        standardButtons: Dialog.Yes | Dialog.No
+        anchors.centerIn: parent
+        Material.background: "#333"
+        onAccepted:  {
+            HistoryModel.persistHistory()
+            mainRoot.exitConfirmed = true
+            confirmExitDialog.close()
+            mainRoot.close()
+        }
+    }
+
+    onClosing: (close) => {
+                   if (mainLoader.item && mainLoader.item.mainStackView.depth > 1) {
+                       close.accepted = false
+                       mainLoader.item.mainStackView.pop()
+                   } else if (!exitConfirmed) {
+                       close.accepted = false
+                       confirmExitDialog.open()
+                   } else {
+                       // Allow the close to proceed
+                       close.accepted = true
+                   }
+               }
 }

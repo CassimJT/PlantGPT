@@ -1,9 +1,10 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import HistoryModel
 Page {
-
+    property int timeDuration: 500
+    property int pauseDuration: 200
     ScrollView {
         id: scrollView
         anchors {
@@ -30,7 +31,7 @@ Page {
                 font.pixelSize: 20
                 font.bold: true
                 color: "#0078D4"
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
 
             Text {
@@ -40,7 +41,7 @@ Page {
                 wrapMode: Text.WordWrap
                 opacity: 0
                 font.pixelSize: 16
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
 
             Text {
@@ -51,7 +52,7 @@ Page {
                 opacity: 0
                 font.pixelSize: 16
                 color: "#28A745"
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
         }
     }
@@ -63,30 +64,31 @@ Page {
             target: diseaseText;
             property: "opacity";
             to: 1;
-            duration: 1000
+            duration: timeDuration
         }
         PauseAnimation {
-            duration: 500
+            duration: pauseDuration
         }
         PropertyAnimation {
             target: descriptionText;
             property: "opacity";
             to: 1;
-            duration:
-                1000
+            duration: timeDuration
+
         }
         PauseAnimation {
-            duration: 500
+            duration: pauseDuration
         }
         PropertyAnimation {
             target: cureText;
             property: "opacity";
             to: 1;
-            duration: 1000
+            duration: timeDuration
         }
     }
 
     Component.onCompleted:{
+        HistoryModel.persistHistory()
         fadeInAnim.start()
     }
 }

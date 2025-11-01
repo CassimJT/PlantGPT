@@ -3,8 +3,9 @@ import QtQuick.Controls
 import QtQuick.Controls.Material
 import QtQuick.Layouts
 import QtQuick.Dialogs
-
-import "../utils"
+import HistoryModel
+import "../utils/"
+import "../utils/Utils.js" as Utils
 import QtCore
 
 Page {
@@ -219,6 +220,11 @@ Page {
         //onInfarenceFinished:
         function onInfarenceFinished () {
             loading.visible = false
+            let diseaseName = ModelRunner.diseaseName
+            let classIndex = ModelRunner.classIndex
+            let currentDate = Utils.getCurrentDate()
+            //save and persist the data
+            HistoryModel.addToHistory(diseaseName,classIndex,currentDate)
             console.log(ModelRunner.diseaseName)
             mainStackView.push("InfarenceResultPage.qml")
         }

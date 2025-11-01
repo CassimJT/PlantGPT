@@ -34,26 +34,39 @@ class ModelRunner : public QObject
 
     Q_PROPERTY(QString cure READ cure WRITE setCure NOTIFY cureChanged FINAL)
 
+    Q_PROPERTY(int classIndex READ classIndex WRITE setClassIndex NOTIFY classIndexChanged FINAL)
+
+
     Q_OBJECT
 public:
     explicit ModelRunner(QObject *parent = nullptr);
 
     QString diseaseName() const;
-    void setDiseaseName(const QString &newDiseaseName);
+    Q_INVOKABLE void setDiseaseName(const QString &newDiseaseName);
 
     QString description() const;
-    void setDescription(const QString &newDescription);
+    Q_INVOKABLE void setDescription(const QString &newDescription);
 
 
     QString cure() const;
-    void setCure(const QString &newCure);
+    Q_INVOKABLE void setCure(const QString &newCure);
 
     float confidence() const;
-    void setConfidence(float newConfidence);
+    Q_INVOKABLE void setConfidence(float newConfidence);
+
+
+    int classIndex() const;
+    Q_INVOKABLE void setClassIndex(int newClassIndex);
 
 public slots:
 
     void classifyImage(const QString &imagePath);
+
+    QString className(int class_id);
+
+    QString classDescripion(int class_id);
+
+    QString classCure(int class_id);
 
 signals:
     void diseaseNameChanged();
@@ -67,6 +80,9 @@ signals:
     void confidenceChanged();
 
     void infarenceFaild();
+
+
+    void classIndexChanged();
 
 private:
     QScopedPointer<Module> module;
@@ -83,12 +99,6 @@ private:
 
     QString prepareModelFile();
 
-    QString className(int class_id);
-
-    QString classDescripion(int class_id);
-
-    QString classCure(int class_id);
-
     QString m_diseaseName;
 
     QString m_description;
@@ -97,6 +107,7 @@ private:
 
     float m_confidence;
 
+    int m_classIndex;
 
 
 };

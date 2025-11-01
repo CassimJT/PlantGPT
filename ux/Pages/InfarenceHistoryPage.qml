@@ -1,9 +1,14 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import HistoryModel
 
 Page {
-    property int classNumber: 0
+    property int classIndex: 0
+    property string diseaseName: ""
+    property int timeDuration: 500
+    property int pauseDuration: 200
+
     ScrollView {
         id: scrollView
         anchors {
@@ -24,13 +29,13 @@ Page {
 
             Text {
                 id: diseaseText
-                text: ModelRunner.diseaseName
+                text: diseaseName
                 width: contentColumn.width - 40
                 opacity: 0
                 font.pixelSize: 20
                 font.bold: true
                 color: "#0078D4"
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
 
             Text {
@@ -40,7 +45,7 @@ Page {
                 wrapMode: Text.WordWrap
                 opacity: 0
                 font.pixelSize: 16
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
 
             Text {
@@ -51,7 +56,7 @@ Page {
                 opacity: 0
                 font.pixelSize: 16
                 color: "#28A745"
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on opacity { NumberAnimation { duration: timeDuration } }
             }
         }
     }
@@ -63,30 +68,34 @@ Page {
             target: diseaseText;
             property: "opacity";
             to: 1;
-            duration: 1000
+            duration: timeDuration
         }
         PauseAnimation {
-            duration: 500
+            duration: pauseDuration
         }
         PropertyAnimation {
             target: descriptionText;
             property: "opacity";
             to: 1;
-            duration:
-                1000
+            duration: timeDuration
+
         }
         PauseAnimation {
-            duration: 500
+            duration: pauseDuration
         }
         PropertyAnimation {
             target: cureText;
             property: "opacity";
             to: 1;
-            duration: 1000
+            duration: timeDuration
         }
     }
 
     Component.onCompleted:{
-
+        let description = ModelRunner.classDescripion(classIndex)
+        let cure = ModelRunner.classCure(classIndex)
+        descriptionText.text = description
+        cureText.text = cure
+        fadeInAnim.start()
     }
 }
