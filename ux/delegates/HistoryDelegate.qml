@@ -56,9 +56,10 @@ ItemDelegate {
     onClicked: {
         //go to infareceHistor
         mainLoader.item.mainStackView.push("../Pages/InfarenceHistoryPage.qml",{
-                                               "classIndex":classIndex,
-                                                "diseaseName":diseaseName
-                                           })
+                                                "classIndex":classIndex,
+                                                "diseaseName":diseaseName,
+                                                "confidence":confidence
+                                   })
         mainRoot.drawer.close()
     }
 }

@@ -3,8 +3,10 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import HistoryModel
 Page {
+    id:infarence
     property int timeDuration: 500
     property int pauseDuration: 200
+    property real confidence: 0.0
     ScrollView {
         id: scrollView
         anchors {
@@ -85,9 +87,62 @@ Page {
             to: 1;
             duration: timeDuration
         }
+        PropertyAnimation {
+            target: roundBtn;
+            property: "opacity";
+            to: 1;
+            duration: timeDuration
+        }
+        PropertyAnimation {
+            target: confiLabel;
+            property: "opacity";
+            to: 1;
+            duration: timeDuration
+        }
+    }
+    //floating btn
+    RoundButton {
+        id: roundBtn
+        width: 70
+        height: width
+        z: 10
+        radius: width / 2
+        Material.elevation: 8
+        opacity: 0
+        Material.background: Material.accent
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+            rightMargin: 25
+            bottomMargin: parent.height * 0.10
+        }
+        Label {
+            id:confi
+            text: infarence.confidence.toFixed(1) + "%"
+            anchors.centerIn: parent
+            color:  infarence.confidence.toFixed(1) < 50.0 ? "red" : "green"
+            font.bold: true
+        }
+
+        onClicked: {
+            HistoryModel.clearModel()
+        }
+        Behavior on opacity { NumberAnimation { duration: timeDuration } }
+    }
+    Label {
+        id:confiLabel
+        text: qsTr("confidence")
+        opacity: 0
+        anchors {
+            top: roundBtn.bottom
+            horizontalCenter: roundBtn.horizontalCenter
+        }
+        Behavior on opacity { NumberAnimation { duration: timeDuration } }
     }
 
+    //signal connection
     Component.onCompleted:{
+        infarence.confidence = ModelRunner.confidence
         HistoryModel.persistHistory()
         fadeInAnim.start()
     }

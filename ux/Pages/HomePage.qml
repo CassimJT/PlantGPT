@@ -212,7 +212,10 @@ Page {
     }
     // --------- Function ------------------------
     function uploadForInfarance() {
-        ModelRunner.classifyImage(Helper.imagePreview());
+        var preview = Helper.imagePreview()
+        var path = Helper.localFilePath()
+        let file = preview || path
+        ModelRunner.classifyImage(file);
     }
 
     Connections {
@@ -223,8 +226,11 @@ Page {
             let diseaseName = ModelRunner.diseaseName
             let classIndex = ModelRunner.classIndex
             let currentDate = Utils.getCurrentDate()
+            let confidence = ModelRunner.confidence
+            let fixedConfidence = confidence.toFixed(1)
+            console.log(fixedConfidence)
             //save and persist the data
-            HistoryModel.addToHistory(diseaseName,classIndex,currentDate)
+            HistoryModel.addToHistory(diseaseName,classIndex,currentDate,fixedConfidence)
             console.log(ModelRunner.diseaseName)
             mainStackView.push("InfarenceResultPage.qml")
         }

@@ -35,6 +35,11 @@ void ModelRunner::classifyImage(const QString &imageDataBase64)
     } else {
         filePath = imageDataBase64;
     }
+    //for image that comes from gallary piker
+    qDebug() << filePath;
+    if(filePath.startsWith("file://")) {
+        filePath = QUrl(filePath).toLocalFile();
+    }
     cv::Mat img = cv::imread(filePath.toStdString());
     if (img.empty()) {
         qDebug() <<  "Failed to load image.";

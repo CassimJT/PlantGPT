@@ -31,7 +31,7 @@ ApplicationWindow {
     Material.accent : "#FF9800"
     Material.background:  "#333"
 
-    //-------------- Header ---------------------------------------------------------
+//-------------- Header ---------------------------------------------------------
     header: Header {
         id: appHeader
         onSwitchClicked: {
@@ -62,52 +62,42 @@ ApplicationWindow {
             }
         }
     }
-    //---------- Loader ----------------------------------
+//---------- Loader ----------------------------------
     Loader {
         id: mainLoader
         anchors.fill: parent
         source:"./ux/home/MainStackView.qml"
     }
-    //--------Drawe ------------------------------
+//--------Drawe ------------------------------
     Drawer {
         id: drawer
         width: parent.width * 0.85
         height: parent.height
         padding: 10
-        Material.background: "#333"
+        Material.background:  "#333"
         //----SearchField
         SearchField {
             id: searchField
-            suggestionModel: filterModel
-            textRole: "diseaseName"
             anchors {
                 top: parent.top
                 right: parent.right
                 left: parent.left
                 margins: 10
             }
-            onTextChanged: {
-                filterModel.invalidate()
-            }
+
         }
-        //-----SortFilterProxyModel
-        SortFilterProxyModel {
-            id: filterModel
+        //-----Qsortfill
+        SortFilterProxyModel{
+            id: fileterModel
             model: HistoryModel.listmodel
             filters: [
-                FunctionFilter {
-                    component RoleData: QtObject {
-                        property string diseaseName
-                    }
-                    function filter(data: RoleData) : bool {
-
-                        if (searchField.text === "")
-                            return true
-                        return data.diseaseName && data.diseaseName.toLowerCase().includes(searchField.text.toLowerCase())
-                    }
+                ValueFilter {
+                    roleName: "diseaseName"
+                    value: searchField.text
                 }
             ]
         }
+        //--------------------
         Label {
             id: hisoryLable
             text: qsTr("History")
@@ -118,6 +108,7 @@ ApplicationWindow {
                 margins: 10
             }
         }
+
         Rectangle {
             id: frame
             width: 1
@@ -131,27 +122,12 @@ ApplicationWindow {
                 bottomMargin: 10
             }
         }
+        //------ListView
         ListView {
             id: view
             clip: true
-            model: filterModel
+            model: HistoryModel.listmodel
             delegate: HistoryDelegate{}
-
-            section {
-                property: "date"
-                criteria: ViewSection.FullString
-                labelPositioning: ViewSection.InlineLabels
-                delegate: ItemDelegate {
-                    width: parent.width
-                    Label {
-                        id: dateLabel
-                        text: section
-                        font.pixelSize: 14
-                        color: "#666"
-                        anchors.centerIn: parent
-                    }
-                }
-            }
 
             anchors {
                 top: hisoryLable.bottom
@@ -159,6 +135,7 @@ ApplicationWindow {
                 bottom: parent.bottom
                 left: frame.right
             }
+
         }
         RoundButton {
             id: roundBtn
@@ -172,6 +149,7 @@ ApplicationWindow {
                 bottom: parent.bottom
                 rightMargin: 25
             }
+
             Image {
                 id: clear
                 source: "qrc:/assets/com/clear.png"
@@ -180,18 +158,17 @@ ApplicationWindow {
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
             }
+
             onClicked: {
-                clearAll.open()
+                HistoryModel.clearModel()
             }
         }
-        Component.onCompleted: {
-            HistoryModel.loadHistory()
-            filterModel.invalidate()
-
-        }
+       Component.onCompleted: {
+           HistoryModel.loadHistory()
+       }
     }
 
-    //--------Dialog -------------------------------------------------
+//--------Dialog -------------------------------------------------
     Dialog {
         id: confirmExitDialog
         title: "Exit Application?"
@@ -203,17 +180,6 @@ ApplicationWindow {
             mainRoot.exitConfirmed = true
             confirmExitDialog.close()
             mainRoot.close()
-        }
-    }
-    Dialog {
-        id: clearAll
-        title: "clear all history?"
-        standardButtons: Dialog.Yes | Dialog.No
-        anchors.centerIn: parent
-        Material.background: "#333"
-        onAccepted:  {
-            HistoryModel.clearModel()
-            filterModel.invalidate()
         }
     }
 

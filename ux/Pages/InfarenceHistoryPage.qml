@@ -8,6 +8,7 @@ Page {
     property string diseaseName: ""
     property int timeDuration: 500
     property int pauseDuration: 200
+    property real confidence: 0.0
 
     ScrollView {
         id: scrollView
@@ -89,8 +90,61 @@ Page {
             to: 1;
             duration: timeDuration
         }
+        PropertyAnimation {
+            target: roundBtn;
+            property: "opacity";
+            to: 1;
+            duration: timeDuration
+        }
+        PropertyAnimation {
+            target: confiLabel;
+            property: "opacity";
+            to: 1;
+            duration: timeDuration
+        }
     }
 
+    //floating btn
+    RoundButton {
+        id: roundBtn
+        width: 70
+        height: width
+        z: 10
+        radius: width / 2
+        Material.elevation: 8
+        opacity: 0
+        Material.background: Material.accent
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+            rightMargin: 25
+            bottomMargin: parent.height * 0.10
+        }
+        Label {
+            id:confi
+            text: confidence.toFixed(1) + "%"
+            anchors.centerIn: parent
+            color: confidence < 50.0 ? "red" : "green"
+            font.bold: true
+        }
+
+        onClicked: {
+            HistoryModel.clearModel()
+        }
+        Behavior on opacity { NumberAnimation { duration: timeDuration } }
+    }
+    Label {
+        id:confiLabel
+        text: qsTr("confidence")
+        opacity: 0
+        anchors {
+            top: roundBtn.bottom
+            horizontalCenter: roundBtn.horizontalCenter
+        }
+        Behavior on opacity { NumberAnimation { duration: timeDuration } }
+    }
+
+    //signal connections
     Component.onCompleted:{
         let description = ModelRunner.classDescripion(classIndex)
         let cure = ModelRunner.classCure(classIndex)
