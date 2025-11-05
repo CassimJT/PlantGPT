@@ -32,5 +32,8 @@
         <file>ux/models/HistoryModel.qml</file>
         <file>assets/com/delete.png</file>
         <file>assets/com/clear.png</file>
+        <file>assets/com/plant-height.png</file>
+        <file>assets/com/dht.png</file>
+        <file>assets/com/cctv-camera.png</file>
     </qresource>
 </RCC>

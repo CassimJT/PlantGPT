@@ -6,8 +6,8 @@ import QtQuick.Controls
 
 Item {
     id: progress
-    implicitWidth: 200
-    implicitHeight: 200
+    implicitWidth: parent.width * 0.75
+    implicitHeight: parent.width * 0.75
 
     // Properties
     // General

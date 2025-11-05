@@ -10,6 +10,7 @@ Item {
     signal themeChanged()
     signal menuClicked()
     property real h_height: 70
+    z: 10
     Rectangle {
         id: header
         width: parent.width
