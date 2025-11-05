@@ -9,7 +9,7 @@ Item {
     signal switchClicked()
     signal themeChanged()
     signal menuClicked()
-    property real h_height: 70
+    property real h_height: 90
     z: 10
     Rectangle {
         id: header
@@ -18,6 +18,7 @@ Item {
         ToolBar {
             id: tooBar
             anchors.fill: parent
+            Material.elevation: 7
             RowLayout{
                 id: row
                 visible: header.height === root.h_height
@@ -25,6 +26,7 @@ Item {
                 height: parent.height
                 ToolButton {
                     id: menu
+                    Layout.leftMargin: 10
                     Image {
                         id: icon
                         width: 30
@@ -43,8 +45,6 @@ Item {
                                     return "qrc:/assets/dark/menu.png"
                                 }
                             }
-
-
                         }
                         fillMode: Image.PreserveAspectFit
                         anchors.centerIn: parent
@@ -59,6 +59,7 @@ Item {
                 }
                 Switch {
                     id: mode
+                    Layout.rightMargin: 10
                     text: checked ? "Dark" : "Light"
                     Layout.alignment: Qt.AlignRight
                     onClicked: {
@@ -77,13 +78,19 @@ Item {
                 easing.type: Easing.InOutQuad
             }
         }
+        //-----------the tabBar visible only when the header is expandede
+        HeaderItemes {
+            id: items
+            visible: header.height === root.parent.height * 0.3  ? true : false
+
+        }
     }
 
     Image {
         id: handle
         width: 152
         height: 45
-        opacity: 0.5
+        opacity: header.height > root.h_height ? 1 : 0.5
         source: header.height > root.h_height ? "qrc:/assets/dark/top_curtain_drag_back.png": "qrc:/assets/dark/top_curtain_drag.png"
         fillMode: Image.PreserveAspectFit
         anchors {
@@ -107,7 +114,7 @@ Item {
             anchors.fill: parent
             onClicked:  {
                 if(header.height === root.h_height) {
-                    header.height = root.parent.height * 0.30
+                    header.height = root.parent.height * 0.3
                 } else if( header.height > root.h_height) {
                     header.height = root.h_height
                 }

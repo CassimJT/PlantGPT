@@ -35,5 +35,9 @@
         <file>assets/com/plant-height.png</file>
         <file>assets/com/dht.png</file>
         <file>assets/com/cctv-camera.png</file>
+        <file>assets/dark/setting.png</file>
+        <file>assets/dark/info.png</file>
+        <file>assets/light/setting.png</file>
+        <file>assets/light/info.png</file>
     </qresource>
 </RCC>

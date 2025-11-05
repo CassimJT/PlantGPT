@@ -126,6 +126,7 @@ qt_add_qml_module(appPlantGPT
         QML_FILES ux/delegates/HistoryDelegate.qml
         QML_FILES ux/models/SensorSelectionModel.qml
         QML_FILES ux/delegates/SensorSelectionDelegate.qml
+        QML_FILES ux/utils/HeaderItemes.qml
 )
 
 # -------------------------

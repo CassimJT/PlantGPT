@@ -136,6 +136,7 @@ Page {
     Label {
         id:confiLabel
         text: qsTr("confidence")
+        color: mainRoot.isDarkTheme ? "#000814" : "#ffffff"
         opacity: 0
         anchors {
             top: roundBtn.bottom

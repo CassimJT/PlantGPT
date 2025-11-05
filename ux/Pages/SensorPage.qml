@@ -11,6 +11,12 @@ Page {
         id: swipeView
         height: parent.height * 0.8
         currentIndex: view.currentIndex
+        Behavior on currentIndex {
+             NumberAnimation {
+                 duration: 400
+                 easing.type: Easing.InOutQuad
+             }
+         }
         anchors {
             top: parent.top
             topMargin: 10
