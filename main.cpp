@@ -4,6 +4,7 @@
 #include "core/sources/myhelper.h"
 #include <QQmlContext>
 #include "core/sources/modelrunner.h"
+#include "core/sources/deviceinterface.h"
 
 int main(int argc, char *argv[])
 {
@@ -16,9 +17,11 @@ int main(int argc, char *argv[])
 
     auto context = engine.rootContext();
     context->setContextProperty("Android", new AndroidSystem(&app));
+    context->setContextProperty("DeviceInterface", new DeviceInterface(&app));
     context->setContextProperty("Helper", &helper);
     context->setContextProperty("ModelRunner", &modelRunner);
     qmlRegisterSingletonType(QUrl("qrc:/ux/models/HistoryModel.qml"), "HistoryModel", 1, 0, "HistoryModel");
+    qmlRegisterSingletonType(QUrl("qrc:/ux/utils/SystemSettings.qml"), "SystemSettings", 1, 0, "SystemSettings");
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

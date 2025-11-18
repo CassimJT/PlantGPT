@@ -17,7 +17,7 @@ Page {
             right: parent.right
             left: parent.left
             bottom: parent.bottom
-            topMargin: parent.height * 0.10
+            topMargin: parent.height * 0.12
         }
 
         clip: true

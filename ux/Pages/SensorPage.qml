@@ -27,14 +27,20 @@ Page {
         // Example pages
         Page {
             DHTMeter {
+                id: dhtMeter
                 anchors.centerIn: parent
+                t_value: DeviceInterface.temperature
+                h_value: DeviceInterface.humidity
+                stateLabel: DeviceInterface.connected ? "ON" : "OFF"
+                onConnectClicked: {
+                    DeviceInterface.establishConnection()
+                }
             }
         }
-        Page {
-            BusyIndicator {
-                anchors.centerIn: parent
-            }
+        RTSCameraPage {
+
         }
+
         Page {
             BusyIndicator {
                 anchors.centerIn: parent
@@ -62,9 +68,24 @@ Page {
 
         path: Path {
             startX: view.width * 0.2;
-            startY: view.height * 0.1
-            PathLine { x: view.width * 0.8; y: view.height * 0.1 }
+            startY: swipeView.currentIndex === 1 ? view.height * 0.5 : view.height * 0.1
+            PathLine {
+                x: view.width * 0.8;
+                y: swipeView.currentIndex === 1 ? view.height * 0.5 : view.height * 0.1
+            }
         }
         currentIndex: swipeView.currentIndex
+    }
+
+    Connections {
+        target: DeviceInterface
+        function onConnectionEstablished(state) {
+            console.log(state)
+            if(!state) {
+                dhtMeter.t_value = 0
+                dhtMeter.h_value = 0
+            }
+
+        }
     }
 }

@@ -55,6 +55,7 @@ endif()
 # Qt setup
 # -------------------------
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Multimedia Concurrent Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 qt_standard_project_setup(REQUIRES 6.8)
 
 # -------------------------
@@ -127,6 +128,9 @@ qt_add_qml_module(appPlantGPT
         QML_FILES ux/models/SensorSelectionModel.qml
         QML_FILES ux/delegates/SensorSelectionDelegate.qml
         QML_FILES ux/utils/HeaderItemes.qml
+        QML_FILES ux/Pages/RTSCameraPage.qml
+        QML_FILES ux/utils/SystemSettings.qml
+        SOURCES core/sources/deviceinterface.h core/sources/deviceinterface.cpp
 )
 
 # -------------------------
@@ -152,6 +156,7 @@ target_link_libraries(appPlantGPT
         Qt6::Multimedia
         Qt6::Concurrent
         Qt6::Core
+        Qt6::Mqtt
 )
 
 target_include_directories(appPlantGPT PRIVATE
@@ -175,6 +180,7 @@ target_link_libraries(appPlantGPT
         executorch::backends
         executorch::extensions
 )
+target_link_libraries(appPlantGPT PRIVATE Qt6::Core)
 
 target_include_directories(appPlantGPT PRIVATE ${CMAKE_SOURCE_DIR}/core/executorch)
 

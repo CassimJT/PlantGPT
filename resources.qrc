@@ -39,5 +39,6 @@
         <file>assets/dark/info.png</file>
         <file>assets/light/setting.png</file>
         <file>assets/light/info.png</file>
+        <file>assets/com/connect.png</file>
     </qresource>
 </RCC>

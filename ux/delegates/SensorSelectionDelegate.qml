@@ -17,9 +17,12 @@ Item {
     Behavior on opacity {
         NumberAnimation { duration: 300 }
     }
+    Behavior on x {
+        NumberAnimation { duration: 400 }
+    }
 
     scale: PathView.isCurrentItem ? 1 : 0.5
-    opacity: PathView.isCurrentItem ? 1 : 0.3
+    opacity: PathView.isCurrentItem ? 1 : 0.5
 
     Rectangle {
         anchors.fill: parent

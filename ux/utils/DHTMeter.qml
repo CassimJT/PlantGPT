@@ -32,6 +32,7 @@ Item {
     // Text
     property string t_unit: "°C"
     property string h_unit: "%"
+    property string stateLabel: "OFF"
 
     //progress start & end
     property int h_startAngle: -80
@@ -44,8 +45,8 @@ Item {
     property real h_maxValue: 100
 
     //progress values
-    property real t_value: 30
-    property real h_value: 50
+    property real t_value: 0
+    property real h_value: 0
 
     //Images
     property real iconSize: 32
@@ -54,6 +55,9 @@ Item {
     property color stateLableColor: "Cyan"
     property color valuesLableColor: "Gray"
     property real valuesLableSize: 12
+
+    //signals
+    signal connectClicked()
 
     //dotted line
     Canvas {
@@ -196,7 +200,7 @@ Item {
             }
             Label{
                 id: state
-                text: "OFF"
+                text: progress.stateLabel
                 font.pointSize: 19
                 font.bold: true
                 color: progress.stateLableColor
@@ -231,6 +235,26 @@ Item {
                 horizontalCenter: rowLayout.horizontalCenter
             }
         }
+        Image {
+            id: connect
+            width: 26
+            height: width
+            source: "qrc:/assets/com/connect.png"
+            fillMode: Image.PreserveAspectFit
+            visible: state.text === "OFF"
+            anchors {
+                top: rowLayout.bottom
+                topMargin: 10
+                horizontalCenter: rowLayout.horizontalCenter
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    connectClicked()
+                }
+            }
+        }
 
 
     }
@@ -241,11 +265,11 @@ Item {
         interval: 1000
         repeat: true
         onTriggered: {
-           if(t_value > 40) {
+            if(t_value > 40) {
                 isTempCritical = !isTempCritical
-           }else {
-               isTempCritical = false
-           }
+            }else {
+                isTempCritical = false
+            }
         }
     }
 }
