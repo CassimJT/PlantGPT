@@ -13,7 +13,10 @@ DeviceInterface::DeviceInterface(QObject *parent)
     connect(mqttClient,&QMqttClient::disconnected, this,&DeviceInterface::mqttDisconnected);
     connect(mqttClient,&QMqttClient::errorChanged, this,&DeviceInterface::errorOccured);
     connect(mqttClient,&QMqttClient::messageReceived, this,&DeviceInterface::onMqttMessageReceived);
+    connect(mqttClient, &QMqttClient::errorChanged,this, &DeviceInterface::onMqttError);
+    connect(mqttClient,&QMqttClient::stateChanged, this, &DeviceInterface::onMqttStateChanged);
 }
+
 
 DeviceInterface::~DeviceInterface()
 {
@@ -207,6 +210,37 @@ void DeviceInterface::publishLEDState(bool state)
 
 }
 /**
+ * @brief DeviceInterface::onMqttError
+ * @param error
+ * emit a signal when an error occure
+ */
+void DeviceInterface::onMqttError(QMqttClient::ClientError error)
+{
+    if(error != QMqttClient::NoError) {
+        emit mqttError(error);
+    }
+}
+/**
+ * @brief DeviceInterface::onMqttStateChanged
+ * @param state
+ * action when state changed
+ */
+void DeviceInterface::onMqttStateChanged(QMqttClient::ClientState state)
+{
+    switch (state) {
+    case QMqttClient::Disconnected:
+        emit connectionFailed();
+        setConnected(false);
+        break;
+    case QMqttClient::Connected:
+        emit connectionSuccessful();
+        break;
+    case QMqttClient::Connecting:
+        qDebug() << "Connecting to MQTT broker...";
+        break;
+    }
+}
+/**
  * @brief DeviceInterface::connected
  * @return true if onnected else false
  */
@@ -229,12 +263,9 @@ void DeviceInterface::setConnected(bool newConnected)
 
 void DeviceInterface::establishConnection()
 {
-    if(mqttClient) {
-        mqttClient->setHostname("192.168.8.130");
-        mqttClient->setPort(1883);
-        mqttClient->connectToHost();
-    }else {
+    if (!mqttClient)
         return;
-    }
-
+    mqttClient->setHostname("192.168.8.130");
+    mqttClient->setPort(1883);
+    mqttClient->connectToHost();
 }

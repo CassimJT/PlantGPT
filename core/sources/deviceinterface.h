@@ -55,6 +55,10 @@ public slots:
 
     void publishLEDState(bool state);
 
+    void onMqttError(QMqttClient::ClientError error);
+
+    void onMqttStateChanged(QMqttClient::ClientState state);
+
 
 signals:
 
@@ -65,6 +69,12 @@ signals:
     void connectionEstablished(bool state);
 
     void error(QString &errorString);
+
+    void mqttError(QMqttClient::ClientError error);
+
+    void connectionSuccessful();
+
+    void connectionFailed();
 
 
 private:

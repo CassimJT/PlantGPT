@@ -29,8 +29,8 @@ Page {
             DHTMeter {
                 id: dhtMeter
                 anchors.centerIn: parent
-                t_value: DeviceInterface.temperature
-                h_value: DeviceInterface.humidity
+                t_value: DeviceInterface.temperature || 0
+                h_value: DeviceInterface.humidity || 0
                 stateLabel: DeviceInterface.connected ? "ON" : "OFF"
                 onConnectClicked: {
                     DeviceInterface.establishConnection()

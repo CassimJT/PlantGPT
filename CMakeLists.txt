@@ -15,7 +15,7 @@ if(ANDROID)
     message(STATUS ">>> Building for Android <<<")
 
     # Android NDK toolchain
-    set(CMAKE_TOOLCHAIN_FILE "$ENV{HOME}/Android/Sdk/ndk/27.2.12479018/build/cmake/android.toolchain.cmake")
+    set(CMAKE_TOOLCHAIN_FILE "/media/csociety/Backup/CISociety/Android/Sdk/ndk/27.2.12479018/build/cmake/android.toolchain.cmake")
 
     # Prefer 64-bit ABI to avoid ExecuTorch ARMv7 issues
     set(ANDROID_ABI "arm64-v8a")
@@ -48,7 +48,7 @@ if(ANDROID)
 
 else()
     message(STATUS ">>> Building for Desktop Linux <<<")
-    set(OpenCV_DIR "$ENV{HOME}/CISociety/Libs/opencv-install/lib/cmake/opencv4")
+    set(OpenCV_DIR "/media/csociety/Backup/CISociety/Libs/opencv-install/lib/cmake/opencv4")
 endif()
 
 # -------------------------
