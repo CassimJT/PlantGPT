@@ -40,5 +40,7 @@
         <file>assets/light/setting.png</file>
         <file>assets/light/info.png</file>
         <file>assets/com/connect.png</file>
+        <file>assets/com/home.svg</file>
+        <file>assets/com/sensors.svg</file>
     </qresource>
 </RCC>

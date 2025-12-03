@@ -1,3 +1,4 @@
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "core/sources/androidsystem.h"
@@ -5,6 +6,8 @@
 #include <QQmlContext>
 #include "core/sources/modelrunner.h"
 #include "core/sources/deviceinterface.h"
+#include "core/sources/rtsvideooutput.h"
+#include <QObject>
 
 int main(int argc, char *argv[])
 {
@@ -22,6 +25,7 @@ int main(int argc, char *argv[])
     context->setContextProperty("ModelRunner", &modelRunner);
     qmlRegisterSingletonType(QUrl("qrc:/ux/models/HistoryModel.qml"), "HistoryModel", 1, 0, "HistoryModel");
     qmlRegisterSingletonType(QUrl("qrc:/ux/utils/SystemSettings.qml"), "SystemSettings", 1, 0, "SystemSettings");
+    qmlRegisterType<RTSVideoOutput>("RTSVideoOutput",1,0,"RTSVideoOutput");
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

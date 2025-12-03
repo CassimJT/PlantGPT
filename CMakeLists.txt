@@ -56,6 +56,11 @@ endif()
 # -------------------------
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick Multimedia Concurrent Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 qt_standard_project_setup(REQUIRES 6.8)
 
 # -------------------------
@@ -122,6 +127,12 @@ qt_add_qml_module(appPlantGPT
         core/sources/myhelper.cpp
         core/sources/modelrunner.h
         core/sources/modelrunner.cpp
+        core/sources/deviceinterface.h
+        core/sources/deviceinterface.cpp
+        core/sources/rtsvideooutput.h
+        core/sources/rtsvideooutput.cpp
+
+
         QML_FILES ux/Pages/InfarenceResultPage.qml
         QML_FILES ux/Pages/InfarenceHistoryPage.qml
         QML_FILES ux/delegates/HistoryDelegate.qml
@@ -130,7 +141,7 @@ qt_add_qml_module(appPlantGPT
         QML_FILES ux/utils/HeaderItemes.qml
         QML_FILES ux/Pages/RTSCameraPage.qml
         QML_FILES ux/utils/SystemSettings.qml
-        SOURCES core/sources/deviceinterface.h core/sources/deviceinterface.cpp
+        
 )
 
 # -------------------------
@@ -180,6 +191,11 @@ target_link_libraries(appPlantGPT
         executorch::backends
         executorch::extensions
 )
+target_link_libraries(appPlantGPT PRIVATE Qt6::Core)
+target_link_libraries(appPlantGPT PRIVATE Qt6::Quick)
+target_link_libraries(appPlantGPT PRIVATE Qt6::Quick)
+target_link_libraries(appPlantGPT PRIVATE Qt6::Quick)
+target_link_libraries(appPlantGPT PRIVATE Qt6::Quick)
 target_link_libraries(appPlantGPT PRIVATE Qt6::Core)
 
 target_include_directories(appPlantGPT PRIVATE ${CMAKE_SOURCE_DIR}/core/executorch)

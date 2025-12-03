@@ -3,6 +3,7 @@ import QtQuick.Controls
 import "../delegates"
 import "../models"
 import "../utils"
+import RTSVideoOutput
 
 Page {
     id: sensor
@@ -12,11 +13,11 @@ Page {
         height: parent.height * 0.8
         currentIndex: view.currentIndex
         Behavior on currentIndex {
-             NumberAnimation {
-                 duration: 400
-                 easing.type: Easing.InOutQuad
-             }
-         }
+            NumberAnimation {
+                duration: 400
+                easing.type: Easing.InOutQuad
+            }
+        }
         anchors {
             top: parent.top
             topMargin: 10
@@ -38,7 +39,6 @@ Page {
             }
         }
         RTSCameraPage {
-
         }
 
         Page {
@@ -88,4 +88,5 @@ Page {
 
         }
     }
+
 }

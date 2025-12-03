@@ -58,6 +58,11 @@ public:
     int classIndex() const;
     Q_INVOKABLE void setClassIndex(int newClassIndex);
 
+    //Utils
+    QImage matToQImage(const cv::Mat &mat);
+
+    cv::Mat qImageToMat(const QImage &image);
+
 public slots:
 
     void classifyImage(const QString &imagePath);
@@ -92,10 +97,6 @@ private:
     void loadModel();
 
     TensorPtr preprocess(const cv::Mat &img);
-
-    QImage matToQImage(const cv::Mat &mat);
-
-    cv::Mat qImageToMat(const QImage &image);
 
     QString prepareModelFile();
 
